@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/**
+ * @mixin text-style($style-name)
+ * @description
+ *   적용할 스타일 이름을 인자로 받아 모바일과 PC 스타일을 한 번에 적용하는 믹스인
+ * @param {String} $style-name
+ *   $text-styles 맵에 정의된 스타일 이름
+ * @example scss - 적용 예
+ *   .hero-title {
+ *     @include text-style('hero-title');
+ *   }
+ */
+body {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+  }
+}
+
+h2 {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.03em;
+  }
+}
+
+h3 {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.03em;
+  }
+}

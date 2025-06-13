@@ -1,0 +1,22 @@
+// 뼈대가 되는 메인 SCSS 파일
+// main.scss
+
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+
+
+body {
+    @include text-style('hero-title');
+}
+
+h2 {
+    @include text-style('main-subtitle');
+}
+
+h3 {
+    @include text-style('image-subtitle');
+}
+
