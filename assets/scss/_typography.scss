@@ -35,13 +35,13 @@ $text-styles: (
             'font-size': 1.75rem,   // 28px
             'font-weight': 800,     // ExtraBold
             'line-height': 160%,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         ),
         'pc': (
             'font-size': 2.75rem,   // 44px
             'font-weight': 700,     // Bold
             'line-height': 160%,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         )
     ),
     'main-subtitle': (
@@ -50,13 +50,13 @@ $text-styles: (
             'font-size': 1.625rem,  // 26px
             'font-weight': 700,     // Bold
             'line-height': normal,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         ),
         'pc': (
             'font-size': 2.5rem,    // 40px
             'font-weight': 700,     // Bold
             'line-height': normal,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         )
     ),
     'image-subtitle': (
@@ -65,13 +65,13 @@ $text-styles: (
             'font-size': 1.125rem,  // 18px
             'font-weight': 600,     // SemiBold
             'line-height': normal,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         ),
         'pc': (
             'font-size': 1.75rem,   // 28px
             'font-weight': 600,     // SemiBold
             'line-height': normal,
-            'letter-spacing': -0.03em,
+            // 'letter-spacing': -0.03em,
         )
     ),
 
@@ -82,13 +82,13 @@ $text-styles: (
             'font-size': 1.25rem,   // 20px
             'font-weight': 400,     // Regular
             'line-height': 160%,
-            'letter-spacing': -0.03em
+            // 'letter-spacing': -0.03em
         ),
         'pc': (
             'font-size': 1.25rem,   // 20px
             'font-weight': 400,     // Regular
             'line-height': 160%,
-            'letter-spacing': -0.03em
+            // 'letter-spacing': -0.03em
         )
     ),
     'button-font': (
@@ -97,13 +97,13 @@ $text-styles: (
             'font-size': 1.125rem,  // 18px
             'font-weight': 600,     // SemiBold
             'line-height': 140%,
-            'letter-spacing': -0.05em
+            // 'letter-spacing': -0.05em
         ),
         'pc': (
             'font-size': 1.125rem,  // 18px
             'font-weight': 600,     // SemiBold
             'line-height': 140%,
-            'letter-spacing': -0.05em
+            // 'letter-spacing': -0.05em
         )
     ),
     'image-desc': (
@@ -112,13 +112,13 @@ $text-styles: (
             'font-size': 1rem,      // 16px
             'font-weight': 500,     // Medium
             'line-height': normal,
-            'letter-spacing': -0.05em
+            // 'letter-spacing': -0.05em
         ),
         'pc': (
             'font-size': 1rem,      // 16px
             'font-weight': 500,     // Medium
             'line-height': normal,
-            'letter-spacing': -0.05em
+            // 'letter-spacing': -0.05em
         )
     )
 );
