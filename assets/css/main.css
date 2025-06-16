@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* A Modern CSS Reset by Andy Bell */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
 *,
 *::before,
 *::after {
@@ -62,6 +64,69 @@ select {
   display: flex;
 }
 
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-1Thin.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-1Thin.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-1Thin.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-1Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-2ExtraLight.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-2ExtraLight.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-2ExtraLight.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-2ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-3Light.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-3Light.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-3Light.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-3Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-4Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-5Medium.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-5Medium.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-5Medium.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-5Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-6SemiBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-6SemiBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-6SemiBold.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-6SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-7Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-8ExtraBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-8ExtraBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-8ExtraBold.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-8ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.ttf") format("truetype");
+}
 /**
  * @mixin text-style($style-name)
  * @description
@@ -73,6 +138,21 @@ select {
  *     @include text-style('hero-title');
  *   }
  */
+.hi .title h2 {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .hi .title h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -116,9 +196,6 @@ select {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero::before {
   content: "";
@@ -128,6 +205,13 @@ select {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
+}
+.hero .scroll-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .hero .container {
   height: 100%;

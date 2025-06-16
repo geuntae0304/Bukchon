@@ -1,0 +1,8 @@
+.hi{
+    .title{
+        h2{
+            @include text-style('hero-title');
+            color: $gray-900;
+        }
+    }
+}
