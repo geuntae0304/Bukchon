@@ -47,3 +47,17 @@ $info-color:    #2196F3;
 $active-color:    #2196F3;
 $inactive-color:  #BDBDBD;
 $disabled-color:  #E0E0E0;
+
+
+// --- Spacing ---
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.d-flex{
+    display: flex;
+}
