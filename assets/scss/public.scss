@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+.sec01{
+    .sec01_titleForm{
+        .sec01_title{
+            @include text-style('hero-title');
+        }
+        .sec01_subtitle{
+            @include text-style('subpage-desc');
+        }
+    }
+}
