@@ -6,7 +6,6 @@
 @import 'typography';
 @import 'mixins';
 @import 'icons';
-@import 'hi';
 
 
 
@@ -68,13 +67,6 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6);
     };
-    .scroll-icon{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
     .container{
         height: 100%;
         position: relative;
