@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+
+.sec01{
+    .sec01_titleForm{
+        text-align: center;
+        .sec01_title{
+            @include text-style('hero-title');
+            font-family: $font-family-title;
+            margin-bottom: 2rem;
+            .sec01_c_title{
+                color: $primary-color-dark;
+            }
+        }
+        .sec01_subtitle p{
+            @include text-style('hero-title');
+            color: $gray-500;
+        }
+    }
+}
