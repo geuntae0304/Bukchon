@@ -138,21 +138,6 @@ select {
  *     @include text-style('hero-title');
  *   }
  */
-.hi .title h2 {
-  font-family: "Paperlogy", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 800;
-  line-height: 160%;
-  color: #1F2124;
-}
-@media (min-width: 768px) {
-  .hi .title h2 {
-    font-size: 2.75rem;
-    font-weight: 700;
-    line-height: 160%;
-  }
-}
-
 .header {
   position: fixed;
   top: 0;
