@@ -31,8 +31,7 @@ body {
 }
 
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img,
@@ -138,6 +137,126 @@ select {
  *     @include text-style('hero-title');
  *   }
  */
+/* A Modern CSS Reset by Andy Bell */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/**
+ * @mixin text-style($style-name)
+ * @description
+ *   적용할 스타일 이름을 인자로 받아 모바일과 PC 스타일을 한 번에 적용하는 믹스인
+ * @param {String} $style-name
+ *   $text-styles 맵에 정의된 스타일 이름
+ * @example scss - 적용 예
+ *   .hero-title {
+ *     @include text-style('hero-title');
+ *   }
+ */
+.sec01 {
+  padding: 80px 0;
+}
+.sec01 .sec01_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.sec01 .sec01_container .sec01_titleForm {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_title {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  font-family: "Paperlogy", sans-serif;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .sec01 .sec01_container .sec01_titleForm .sec01_title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_title .sec01_c_title {
+  color: #536957;
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_subtitle p {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  color: #7B848D;
+}
+@media (min-width: 768px) {
+  .sec01 .sec01_container .sec01_titleForm .sec01_subtitle p {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.sec01 .sec01_container .sec01_img img {
+  border-radius: 42px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -241,4 +360,4 @@ select {
     font-weight: 400;
     line-height: 160%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
