@@ -1,6 +1,44 @@
 // 재사용할 스타일(mixin)들을 모아두는 파일
 
 // =================================================================
+// 반응형 믹스인 (Responsive Mixins)
+// =================================================================
+
+/**
+ * @mixin mobile
+ * @description
+ *   모바일 화면 크기에서만 적용할 스타일을 정의하는 믹스인
+ * @example scss - 적용 예
+ *   .element {
+ *     @include mobile {
+ *       color: red;
+ *     }
+ *   }
+ */
+@mixin mobile {
+    @media (max-width: ($breakpoint-pc - 1px)) {
+        @content;
+    }
+}
+
+/**
+ * @mixin pc
+ * @description
+ *   PC 화면 크기에서만 적용할 스타일을 정의하는 믹스인
+ * @example scss - 적용 예
+ *   .element {
+ *     @include pc {
+ *       color: blue;
+ *     }
+ *   }
+ */
+@mixin pc {
+    @media (min-width: $breakpoint-pc) {
+        @content;
+    }
+}
+
+// =================================================================
 // 스타일 적용 믹스인 (Typography Mixin)
 // =================================================================
 // 위에서 만든 $text-styles 맵에서 원하는 스타일을 이름으로 찾아요.

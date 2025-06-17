@@ -7,6 +7,7 @@
 @import 'typography';
 @import 'mixins';
 @import 'icons';
+@import 'animation';
 
 
 
@@ -67,23 +68,18 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6);
-    };
-    .scroll-icon{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
-    .container{
+    .container{ 
         height: 100%;
         position: relative;
         z-index: 1;
+        // .container를 hero-content만 중앙 정렬
         display: flex;
-        align-items: center;
-        justify-content: right;
+        align-items: center; //세로 중앙
+        justify-content: center; //가로 중앙
         .hero-content{
             text-align: right;
+            width: 100%;
             h2{
                 @include text-style('hero-title');
                 color: #fff;
@@ -97,7 +93,35 @@
                 @include text-style('subpage-desc');
                 color: #F8A87C;
             }
+            // 모바일에서만 적용되는 스타일
+            @include mobile {
+                h2 {
+                    color: red;
+                }
+                p {
+                    color: red;
+                }
+            }
+        }
+        .scroll-icon{
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%); //정가운데 맞춤
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            align-items: center;
+            color: #fff;
+            p{
+                margin-bottom: 10px;
+            }
+            i{
+                font-size: 24px;
+                animation: bounce 2s ease-in-out infinite;
+            }
         }
     }
-    
 }
