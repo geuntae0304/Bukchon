@@ -13,6 +13,7 @@
         margin-bottom: 4rem;
         text-align: center;
             .sec01_title{
+                color: $gray-900;
                 @include text-style('hero-title');
                 font-family: $font-family-title;
                 margin-bottom: 2rem;
@@ -20,15 +21,15 @@
                     color: $primary-color-dark;
                 }
             }
-            .sec01_subtitle p{
-                @include text-style('hero-title');
+            .sec01_subtitle{
+                @include text-style('subpage-desc');
                 color: $gray-500;
             }
         }
         .sec01_img{
-            // @include mobile{
-            //     padding: 0 24px;
-            // }
+            @include mobile{
+                padding: 0 24px;
+            }
             img{
                 border-radius: 42px;
                 
@@ -36,3 +37,74 @@
         }
     }
 }
+// .swiper-pagination-fraction{
+//     position: absolute !important;
+//     top: 30% !important;
+//     left: 45% !important;
+//     width: 100%;
+//     height: 20px;
+// }
+// .sec02{
+//     padding: 80px 0;
+//     .sec02_container{
+//         max-width: 1440px;
+//         margin: 0 auto;
+//         .sec02_swiper{
+//             position: relative;
+//             .swiper-pagination-fraction{
+//                 position: absolute !important;
+//                 top: 30% !important;
+//                 left: 45% !important;
+//                 width: 100%;
+//                 height: 20px;
+//             }
+//             .swiper-wrapper{
+//                 .swiper-slide{
+//                     .sec02_titleForm{
+//                     margin-bottom: 100px;
+//                         .sec02_title{
+//                             @include text-style('hero-title');
+//                             font-family: $font-family-title;
+//                             margin-bottom: 2rem;
+//                             color: $primary-color-dark;
+//                         }
+//                         .btn_form{
+//                             margin-bottom: 1.5rem;
+//                             display: flex;
+//                             align-items: center;
+//                             gap: 0 24px;
+//                             .sec02_btn{
+//                                 background-color:$primary-color-dark;
+//                                 padding: 20px 16px;
+//                                 color: $gray-50;
+//                                 border-radius: 12px;
+//                                 text-decoration: none;
+//                             }
+//                             .operating_hours{
+//                                 background-color: $gray-100;
+//                                 padding: 20px 16px;
+//                                 color: $gray-500;
+//                                 border-radius: 12px;
+//                             }
+//                         }
+//                         .sec02_subtitle{
+//                             width: 70%;
+//                             color: $gray-700;
+//                             @include text-style('image-desc');
+//                             height: 70px;
+//                         }
+//                     }
+//                     .sec02_img{
+//                         .sec02_img01{
+//                             width: 100%;
+//                             border-radius: 42px;
+//                         }
+//                     }
+//                 }
+//             }
+            
+//         }
+        
+        
+//     }
+// }
