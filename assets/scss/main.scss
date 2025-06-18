@@ -1,12 +1,13 @@
 // 뼈대가 되는 메인 SCSS 파일
 // main.scss
 
+@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/phosphor.css');
+
 @import 'reset';
 @import 'variables';
 @import 'fonts';
 @import 'typography';
 @import 'mixins';
-@import 'icons';
 @import 'animation';
 
 
@@ -54,7 +55,6 @@
 }
 
 // --- Hero Section ---
-
 .hero{
     background: url('../images/hero/main-hero.png') center/cover no-repeat;
     width: 100%;
@@ -93,15 +93,6 @@
                 @include text-style('subpage-desc');
                 color: #F8A87C;
             }
-            // 모바일에서만 적용되는 스타일
-            @include mobile {
-                h2 {
-                    color: red;
-                }
-                p {
-                    color: red;
-                }
-            }
         }
         .scroll-icon{
             position: absolute;
@@ -125,3 +116,175 @@
         }
     }
 }
+// --- End Hero Section ---
+
+// --- About Section ---
+.about{
+    width: 100%;
+    height: 100vh;
+    .container{
+        .top-erea{
+            margin-bottom: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            .title{
+                h2{
+                    font-family: $font-family-title;
+                    font-weight: 600;
+                    font-size: 40px;
+                    color: $primary-color-dark;
+                }
+                p{
+                    font-family: $font-family-ui;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $gray-500;
+                }
+            }
+            .btns{
+                height: fit-content;
+                display: flex;
+                gap: 10px;
+                button{
+                    border-radius: 12px;
+                    align-items: center;
+                    background-color: $gray-100;
+                    border: 1px solid $gray-200;
+                    color: $gray-500;
+                    font-family: $font-family-ui;
+                    transition: all 0.2s ease-in-out;
+                    display: flex;
+                    padding: 10px 15px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    &:hover{
+                        background-color: $gray-200;
+                        color: $gray-500;
+                    }
+                    &:active{
+                        background-color: $primary-color-dark;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .card-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+    
+        // 배경 이미지
+        background-image: url('../images/hero/public-hanok-1.png');
+        background-size: cover;
+        background-position: center;
+        
+        // 배경 이미지 위에 어두운 오버레이
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+    
+        .card-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-top: auto;
+    
+            .card-text {
+                h2 {
+                    @include text-style('image-subtitle');
+                    margin-bottom: 20px;
+                }
+                p {
+                    @include text-style('subpage-desc');
+                    font-weight: 400;
+                    color: $gray-500;
+                }
+            }
+    
+            .card-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 2rem;
+            }
+        }
+        .card-hashtags {
+            display: flex;
+            gap: 20px;
+            .tag {
+                background-color: rgba(255, 255, 255, 0.7);
+                font-size: 16px;
+                color: $gray-900;
+                border-radius: 12px;
+                padding: 7px 15px 5px 15px;
+                text-decoration: none;
+            }
+        }
+        .card-action-button {
+            font-family: $font-family-ui;
+            background-color: #fff;
+            color: $gray-900;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            i {
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+            &:hover{
+                background-color: $primary-color-dark;
+                color: #fff;
+            }
+            &:active{
+                background-color: $primary-color-dark;
+                color: #fff;
+            }
+        }
+    }
+}
+// --- End About Section ---
+
+// --- Dining/Cafe Section ---
+.dining-cafe{
+    width: 100%;
+    height: 100vh;
+    .container{
+        .title{
+            h2{
+                font-family: $font-family-title;
+                font-weight: 600;
+                font-size: 40px;
+                color: $primary-color-dark;
+            }
+            p{
+                font-family: $font-family-ui;
+                font-size: 20px;
+                font-weight: 400;
+                color: $gray-500;
+            }
+        }
+    }
+}
+// --- End Dining/Cafe Section ---

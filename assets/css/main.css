@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/phosphor.css");
 /* A Modern CSS Reset by Andy Bell */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
@@ -64,6 +65,10 @@ select {
   display: flex;
 }
 
+.p-80 {
+  padding: 80px 0;
+}
+
 @font-face {
   font-family: "Paperlogy";
   font-weight: 100;
@@ -127,28 +132,6 @@ select {
   font-display: swap;
   src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.otf") format("opentype"), url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.ttf") format("truetype");
 }
-/**
- * @mixin mobile
- * @description
- *   모바일 화면 크기에서만 적용할 스타일을 정의하는 믹스인
- * @example scss - 적용 예
- *   .element {
- *     @include mobile {
- *       color: red;
- *     }
- *   }
- */
-/**
- * @mixin pc
- * @description
- *   PC 화면 크기에서만 적용할 스타일을 정의하는 믹스인
- * @example scss - 적용 예
- *   .element {
- *     @include pc {
- *       color: blue;
- *     }
- *   }
- */
 /**
  * @mixin text-style($style-name)
  * @description
@@ -266,14 +249,6 @@ select {
     line-height: 160%;
   }
 }
-@media (max-width: 767px) {
-  .hero .container .hero-content h2 {
-    color: red;
-  }
-  .hero .container .hero-content p {
-    color: red;
-  }
-}
 .hero .container .scroll-icon {
   position: absolute;
   bottom: 40px;
@@ -293,4 +268,175 @@ select {
 .hero .container .scroll-icon i {
   font-size: 24px;
   animation: bounce 2s ease-in-out infinite;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+}
+.about .container .top-erea {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.about .container .top-erea .title h2 {
+  font-family: "Paperlogy", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #536957;
+}
+.about .container .top-erea .title p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #7B848D;
+}
+.about .container .top-erea .btns {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 10px;
+}
+.about .container .top-erea .btns button {
+  border-radius: 12px;
+  align-items: center;
+  background-color: #F1F3F5;
+  border: 1px solid #DFE4EA;
+  color: #7B848D;
+  font-family: "Pretendard", sans-serif;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.about .container .top-erea .btns button:hover {
+  background-color: #DFE4EA;
+  color: #7B848D;
+}
+.about .container .top-erea .btns button:active {
+  background-color: #536957;
+  color: #fff;
+}
+.about .card-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/hero/public-hanok-1.png");
+  background-size: cover;
+  background-position: center;
+}
+.about .card-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.about .card-item .card-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+.about .card-item .card-content .card-text h2 {
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .about .card-item .card-content .card-text h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.about .card-item .card-content .card-text p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  font-weight: 400;
+  color: #7B848D;
+}
+@media (min-width: 768px) {
+  .about .card-item .card-content .card-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+.about .card-item .card-content .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.about .card-item .card-hashtags {
+  display: flex;
+  gap: 20px;
+}
+.about .card-item .card-hashtags .tag {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  color: #1F2124;
+  border-radius: 12px;
+  padding: 7px 15px 5px 15px;
+  text-decoration: none;
+}
+.about .card-item .card-action-button {
+  font-family: "Pretendard", sans-serif;
+  background-color: #fff;
+  color: #1F2124;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.about .card-item .card-action-button i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.about .card-item .card-action-button:hover {
+  background-color: #536957;
+  color: #fff;
+}
+.about .card-item .card-action-button:active {
+  background-color: #536957;
+  color: #fff;
+}
+
+.dining-cafe {
+  width: 100%;
+  height: 100vh;
+}
+.dining-cafe .container .title h2 {
+  font-family: "Paperlogy", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #536957;
+}
+.dining-cafe .container .title p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #7B848D;
 }
