@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/phosphor.css");
 /* A Modern CSS Reset by Andy Bell */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
@@ -159,16 +158,37 @@ select {
   z-index: 100;
   width: 100%;
   height: 80px;
-  background-color: #F1F3F5;
+  background-color: transparent;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 .header h2 {
   font-family: "Paperlogy", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.header.scrolled h2 {
   color: #1F2124;
+}
+.header.scrolled .container ul li a {
+  color: #1F2124;
+}
+.header.scrolled .container ul li a:hover {
+  color: #1F2124;
+}
+.header.scrolled .container ul li a:hover::after {
+  width: 100%;
+  background-color: #1F2124;
 }
 .header .container {
   margin: 0 auto;
@@ -184,9 +204,27 @@ select {
 .header .container ul li a {
   font-family: "Paperlogy", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   text-decoration: none;
-  color: #1F2124;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header .container ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.header .container ul li a:hover {
+  color: #fff;
+}
+.header .container ul li a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -270,35 +308,35 @@ select {
   animation: bounce 2s ease-in-out infinite;
 }
 
-.about {
+.public-hanok {
   width: 100%;
   height: 100vh;
 }
-.about .container .top-erea {
+.public-hanok .container .top-erea {
   margin-bottom: 64px;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-.about .container .top-erea .title h2 {
+.public-hanok .container .top-erea .title h2 {
   font-family: "Paperlogy", sans-serif;
   font-weight: 600;
   font-size: 40px;
   color: #536957;
 }
-.about .container .top-erea .title p {
+.public-hanok .container .top-erea .title p {
   font-family: "Pretendard", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #7B848D;
 }
-.about .container .top-erea .btns {
+.public-hanok .container .top-erea .btns {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
   gap: 10px;
 }
-.about .container .top-erea .btns button {
+.public-hanok .container .top-erea .btns button {
   border-radius: 12px;
   align-items: center;
   background-color: #F1F3F5;
@@ -311,15 +349,15 @@ select {
   font-size: 18px;
   font-weight: 400;
 }
-.about .container .top-erea .btns button:hover {
+.public-hanok .container .top-erea .btns button:hover {
   background-color: #DFE4EA;
   color: #7B848D;
 }
-.about .container .top-erea .btns button:active {
+.public-hanok .container .top-erea .btns button:active {
   background-color: #536957;
   color: #fff;
 }
-.about .card-item {
+.public-hanok .card-item {
   position: relative;
   overflow: hidden;
   border-radius: 30px;
@@ -330,7 +368,7 @@ select {
   background-size: cover;
   background-position: center;
 }
-.about .card-item::before {
+.public-hanok .card-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -340,7 +378,7 @@ select {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.about .card-item .card-content {
+.public-hanok .card-item .card-content {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -351,7 +389,7 @@ select {
   justify-content: flex-end;
   margin-top: auto;
 }
-.about .card-item .card-content .card-text h2 {
+.public-hanok .card-item .card-content .card-text h2 {
   font-family: "Paperlogy", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
@@ -359,13 +397,13 @@ select {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  .about .card-item .card-content .card-text h2 {
+  .public-hanok .card-item .card-content .card-text h2 {
     font-size: 1.75rem;
     font-weight: 600;
     line-height: normal;
   }
 }
-.about .card-item .card-content .card-text p {
+.public-hanok .card-item .card-content .card-text p {
   font-family: "Pretendard", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
@@ -374,23 +412,23 @@ select {
   color: #7B848D;
 }
 @media (min-width: 768px) {
-  .about .card-item .card-content .card-text p {
+  .public-hanok .card-item .card-content .card-text p {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 160%;
   }
 }
-.about .card-item .card-content .card-footer {
+.public-hanok .card-item .card-content .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
 }
-.about .card-item .card-hashtags {
+.public-hanok .card-item .card-hashtags {
   display: flex;
   gap: 20px;
 }
-.about .card-item .card-hashtags .tag {
+.public-hanok .card-item .card-hashtags .tag {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   color: #1F2124;
@@ -398,7 +436,7 @@ select {
   padding: 7px 15px 5px 15px;
   text-decoration: none;
 }
-.about .card-item .card-action-button {
+.public-hanok .card-item .card-action-button {
   font-family: "Pretendard", sans-serif;
   background-color: #fff;
   color: #1F2124;
@@ -411,32 +449,99 @@ select {
   align-items: center;
   transition: all 0.2s ease-in-out;
 }
-.about .card-item .card-action-button i {
+.public-hanok .card-item .card-action-button i {
   margin-left: 10px;
   vertical-align: middle;
 }
-.about .card-item .card-action-button:hover {
+.public-hanok .card-item .card-action-button:hover {
   background-color: #536957;
   color: #fff;
 }
-.about .card-item .card-action-button:active {
+.public-hanok .card-item .card-action-button:active {
   background-color: #536957;
   color: #fff;
 }
 
-.dining-cafe {
-  width: 100%;
-  height: 100vh;
+.dining-cafe .container .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
-.dining-cafe .container .title h2 {
+.dining-cafe .container .section-header .section-title h3 {
   font-family: "Paperlogy", sans-serif;
   font-weight: 600;
   font-size: 40px;
   color: #536957;
 }
-.dining-cafe .container .title p {
+.dining-cafe .container .section-header .section-title p {
   font-family: "Pretendard", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #7B848D;
+}
+.dining-cafe .container .dining-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  gap: 1.5rem;
+}
+.dining-cafe .container .grid-item {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.dining-cafe .container .grid-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 1;
+}
+.dining-cafe .container .grid-item .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dining-cafe .container .item--1 {
+  background: url("../images/hero/dining-1.png") center/cover no-repeat;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.dining-cafe .container .item--2 {
+  background: url("../images/hero/dining-2.png") center/cover no-repeat;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.dining-cafe .container .item--3 {
+  background: url("../images/hero/dining-3.png") center/cover no-repeat;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.dining-cafe .container .item--4 {
+  background: url("../images/hero/dining-4.png") center/cover no-repeat;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+@media (max-width: 767px) {
+  .dining-cafe .container .seciton-header .view-all-button.pc-only {
+    display: none;
+  }
+  .dining-cafe .container .dining-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: 300px;
+  }
+  .dining-cafe .container .grid-item {
+    border-radius: 0px;
+    grid-column: auto;
+    grid-row: auto;
+  }
 }

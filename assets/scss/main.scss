@@ -1,8 +1,6 @@
 // 뼈대가 되는 메인 SCSS 파일
 // main.scss
 
-@import url('https://unpkg.com/@phosphor-icons/web@2.1.1/src/css/phosphor.css');
-
 @import 'reset';
 @import 'variables';
 @import 'fonts';
@@ -22,15 +20,43 @@
     z-index: 100;
     width: 100%;
     height: 80px;
-    background-color: $gray-100;
+    background-color: transparent; 
     display: flex;
     align-items: center;
+    transition: all 0.3s ease; 
+    
+    // 기본 상태(투명할 때)에서 텍스트는 흰색
     h2{
         font-family: $font-family-title;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 18px;
         text-decoration: none;
-        color: $gray-900;
+        color: #fff; 
+        transition: color 0.3s ease; 
+    }
+    
+    // 스크롤 시 적용되는 스타일
+    &.scrolled {
+        background-color: rgba(255, 255, 255, 0.7); 
+        backdrop-filter: blur(10px); 
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+        h2 {
+            color: $gray-900;
+        }
+
+        .container ul li a {
+            color: $gray-900;
+            
+            // 스크롤 후 호버 시 효과
+            &:hover {
+                color: $gray-900;
+                
+                &::after {
+                    width: 100%; // 밑줄 표시
+                    background-color: $gray-900; // 스크롤 후에는 검은색 밑줄
+                }
+            }
+        }
     }
     .container{
         margin: 0 auto;
@@ -45,9 +71,32 @@
                 a{
                     font-family: $font-family-title;
                     font-weight: 500;
-                    font-size: 18px;
+                    font-size: 17px;
                     text-decoration: none;
-                    color: $gray-900;
+                    color: #fff; // 기본 상태에서 흰색
+                    transition: all 0.3s ease; // 모든 효과에 전환 적용
+                    position: relative; // 밑줄 효과를 위한 기준점 설정
+                    
+                    // 밑줄 효과를 위한 가상 요소
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        bottom: -5px;
+                        left: 0;
+                        background-color: #fff; // 기본 상태에서는 흰색 밑줄
+                        transition: width 0.3s ease; // 밑줄 애니메이션 효과
+                    }
+                    
+                    // 호버 시 효과
+                    &:hover {
+                        color: #fff; // 흰색으로 변경
+                        
+                        &::after {
+                            width: 100%; // 밑줄이 완전히 표시되도록 하여 호버 효과 강화
+                        }
+                    }
                 }
             }
         }
@@ -118,8 +167,8 @@
 }
 // --- End Hero Section ---
 
-// --- About Section ---
-.about{
+// --- Public Hanok Section ---
+.public-hanok{
     width: 100%;
     height: 100vh;
     .container{
@@ -267,22 +316,99 @@
 // --- End About Section ---
 
 // --- Dining/Cafe Section ---
-.dining-cafe{
-    width: 100%;
-    height: 100vh;
-    .container{
-        .title{
-            h2{
-                font-family: $font-family-title;
-                font-weight: 600;
-                font-size: 40px;
-                color: $primary-color-dark;
+.dining-cafe {
+    .container {
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+
+            // ✨ 클래스 이름 수정
+            .section-title {
+                // ✨ h2 -> h3 선택자 수정
+                h3 {
+                    font-family: $font-family-title;
+                    font-weight: 600;
+                    font-size: 40px;
+                    color: $primary-color-dark;
+                }
+                p {
+                    font-family: $font-family-ui;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $gray-500;
+                }
             }
-            p{
-                font-family: $font-family-ui;
-                font-size: 20px;
-                font-weight: 400;
-                color: $gray-500;
+        }
+        .dining-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 1.5rem;
+        }
+        .grid-item {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                // ✨ background-color -> background 로 수정
+                background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
+                z-index: 1;
+            }
+            .item-content {
+                position: relative;
+                z-index: 2;
+                padding: 1.5rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
+        // ✨ background-image -> background 단축 속성으로 수정
+        .item--1 {
+            background: url('../images/hero/dining-1.png') center/cover no-repeat;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        .item--2 {
+            background: url('../images/hero/dining-2.png') center/cover no-repeat;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        .item--3 {
+            background: url('../images/hero/dining-3.png') center/cover no-repeat;
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+        // ✨ grid-column 위치 수정
+        .item--4 {
+            background: url('../images/hero/dining-4.png') center/cover no-repeat;
+            grid-column: 2 / 4; // 1/2 -> 2/4
+            grid-row: 2 / 3;
+        }
+        
+        // 반응형
+        @include mobile {
+            .seciton-header .view-all-button.pc-only{
+                display: none;
+            }
+            .dining-grid{
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-auto-rows: 300px;
+            }
+            .grid-item{
+                border-radius: 0px;
+                grid-column: auto;
+                grid-row: auto;
             }
         }
     }
