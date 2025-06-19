@@ -190,6 +190,11 @@ select {
   width: 100%;
   background-color: #1F2124;
 }
+.header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 .header .container {
   margin: 0 auto;
   display: flex;
@@ -310,7 +315,6 @@ select {
 
 .public-hanok {
   width: 100%;
-  height: 100vh;
 }
 .public-hanok .container .top-erea {
   margin-bottom: 64px;
@@ -361,7 +365,7 @@ select {
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-  min-height: 600px;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   background-image: url("../images/hero/public-hanok-1.png");
@@ -530,9 +534,64 @@ select {
   grid-column: 2/4;
   grid-row: 2/3;
 }
+.dining-cafe .container .view-all-button {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2124;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.dining-cafe .container .view-all-button i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.dining-cafe .container .view-all-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #1F2124;
+  transition: width 0.3s ease;
+}
+.dining-cafe .container .view-all-button:hover::after {
+  width: 100%;
+}
 @media (max-width: 767px) {
-  .dining-cafe .container .seciton-header .view-all-button.pc-only {
+  .dining-cafe .container .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dining-cafe .container .section-header .view-all-button {
     display: none;
+  }
+  .dining-cafe .container .dining-grid {
+    margin-bottom: 1.5rem;
+  }
+  .dining-cafe .container::after {
+    content: "VIEW ALL";
+    font-family: "Pretendard", sans-serif;
+    background-color: #4A6F5D;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   .dining-cafe .container .dining-grid {
     grid-template-columns: 1fr;
