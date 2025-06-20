@@ -507,6 +507,11 @@ select {
   background-color: #536957;
   color: #fff;
 }
+.public-hanok .container .top-erea .btns button.active {
+  background-color: #536957;
+  color: #fff;
+  border-color: #536957;
+}
 
 .card-item {
   position: relative;
