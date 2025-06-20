@@ -1170,7 +1170,7 @@
             h3 {
                 // PC 제목 대신 모바일용 제목 표시
                 position: relative;
-                color: transparent; // 원래 텍스트 숨기기
+                color: transparent;
                 font-size: 28px;
                 
                 &::before {
