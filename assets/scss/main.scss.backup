@@ -973,26 +973,6 @@
         }
     }
     
-    // 섹션 타이틀 스타일
-    .section-title {
-        margin-bottom: 2rem;
-        
-        h3 {
-            font-family: $font-family-title;
-            font-weight: 600;
-            font-size: 40px;
-            color: $primary-color-dark;
-            margin-bottom: 0.5rem;
-        }
-        
-        p {
-            font-family: $font-family-ui;
-                    font-size: 20px;
-                    font-weight: 400;
-                    color: $gray-500;
-        }
-    }
-    
     // 지도 이미지
     .map-container {
         width: 100%;
@@ -1011,28 +991,9 @@
             border-radius: 12px;
             
             @include pc {
-                min-height: 500px;
-            }
-        }
-    }
-    
-    // 교통 정보 영역
-    .transport-info {
-        display: none;
-        
-        @include pc {
-            display: block;
-        }
-    }
-    
-    // 교통 수단 탭
-    .transport-tabs {
-        display: flex;
-        gap: 1rem;
         margin-bottom: 1.5rem;
         
         .tab {
-            padding: 50px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1168,20 +1129,15 @@
             margin-bottom: 1.5rem;
             
             h3 {
-                // PC 제목 대신 모바일용 제목 표시
-                position: relative;
-                color: transparent; // 원래 텍스트 숨기기
                 font-size: 28px;
-                
-                &::before {
+                // 모바일에서는 "Visiting Bukchon"으로 변경
+                &::after {
                     content: "Visiting Bukchon";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    color: $primary-color-dark;
-                    font-family: $font-family-title;
-                    font-weight: 600;
+                    display: block;
                 }
+                
+                // PC 제목 숨기기
+                font-size: 0;
                 
                 & + p {
                     font-size: 16px;
@@ -1190,5 +1146,4 @@
         }
     }
 }
-
 // --- End Visit Bukchon Section ---

@@ -956,14 +956,7 @@ select {
 }
 @media (max-width: 767px) {
   .programs .container .section-header .view-all-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-    padding: 12px 0;
-    background-color: #F1F3F5;
-    border-radius: 12px;
-    font-size: 16px;
+    display: none;
   }
 }
 .programs .container .section-header .view-all-button i {
@@ -1068,5 +1061,202 @@ select {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+}
+
+.visit-bukchon {
+  background-color: #F8F9FA;
+}
+.visit-bukchon .visit-bukchon-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .visit-bukchon .visit-bukchon-content {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+  }
+}
+.visit-bukchon .section-title {
+  margin-bottom: 2rem;
+}
+.visit-bukchon .section-title h3 {
+  font-family: "Paperlogy", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #536957;
+  margin-bottom: 0.5rem;
+}
+.visit-bukchon .section-title p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #7B848D;
+}
+.visit-bukchon .map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.visit-bukchon .map-container .map-image {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background-image: url("../images/hero/hero-map.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .visit-bukchon .map-container .map-image {
+    min-height: 500px;
+  }
+}
+.visit-bukchon .transport-info {
+  display: none;
+}
+@media (min-width: 768px) {
+  .visit-bukchon .transport-info {
+    display: block;
+  }
+}
+.visit-bukchon .transport-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.visit-bukchon .transport-tabs .tab {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: #F1F3F5;
+  border: 1px solid #DFE4EA;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.visit-bukchon .transport-tabs .tab.active {
+  background-color: #3A4046;
+}
+.visit-bukchon .transport-tabs .tab.active span {
+  color: #fff;
+}
+.visit-bukchon .transport-tabs .tab.active .tab-icon {
+  opacity: 1;
+}
+.visit-bukchon .transport-tabs .tab.active i {
+  color: #fff !important;
+}
+.visit-bukchon .transport-tabs .tab .tab-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+.visit-bukchon .transport-tabs .tab .tab-icon i {
+  font-size: 24px;
+  color: #4D5359;
+}
+.visit-bukchon .transport-tabs .tab span {
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7B848D;
+}
+.visit-bukchon .transport-content {
+  margin-bottom: 2rem;
+}
+.visit-bukchon .transport-content .transport-item {
+  display: none;
+}
+.visit-bukchon .transport-content .transport-item.active {
+  display: block;
+}
+.visit-bukchon .transport-content .station-info {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.visit-bukchon .transport-content .station-info h4 {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1F2124;
+  margin-bottom: 0.5rem;
+}
+.visit-bukchon .transport-content .station-info p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #7B848D;
+}
+.visit-bukchon .view-all-link {
+  display: flex;
+  align-items: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #536957;
+  text-decoration: none;
+}
+.visit-bukchon .view-all-link span {
+  margin-right: 0.5rem;
+}
+.visit-bukchon .view-all-link i {
+  font-size: 18px;
+}
+.visit-bukchon .mobile-view-all {
+  display: none;
+}
+@media (max-width: 767px) {
+  .visit-bukchon .mobile-view-all {
+    display: block;
+    margin-top: 1.5rem;
+  }
+}
+.visit-bukchon .mobile-view-all .view-all-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #536957;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .visit-bukchon .section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .visit-bukchon .section-title h3 {
+    position: relative;
+    color: transparent;
+    font-size: 28px;
+  }
+  .visit-bukchon .section-title h3::before {
+    content: "Visiting Bukchon";
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #536957;
+    font-family: "Paperlogy", sans-serif;
+    font-weight: 600;
+  }
+  .visit-bukchon .section-title h3 + p {
+    font-size: 16px;
   }
 }
