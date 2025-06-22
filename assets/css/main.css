@@ -305,6 +305,8 @@ select {
 }
 .sec01 .sec01_container .sec01_img img {
   border-radius: 42px;
+  height: 45vh;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .sec01 .sec01_container .sec01_img img {
@@ -574,6 +576,412 @@ select {
     transform: translateX(30px);
   }
 }
+/* A Modern CSS Reset by Andy Bell */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/**
+ * @mixin mobile
+ * @description
+ *   모바일 화면 크기에서만 적용할 스타일을 정의하는 믹스인
+ * @example scss - 적용 예
+ *   .element {
+ *     @include mobile {
+ *       color: red;
+ *     }
+ *   }
+ */
+/**
+ * @mixin pc
+ * @description
+ *   PC 화면 크기에서만 적용할 스타일을 정의하는 믹스인
+ * @example scss - 적용 예
+ *   .element {
+ *     @include pc {
+ *       color: blue;
+ *     }
+ *   }
+ */
+/**
+ * @mixin text-style($style-name)
+ * @description
+ *   적용할 스타일 이름을 인자로 받아 모바일과 PC 스타일을 한 번에 적용하는 믹스인
+ * @param {String} $style-name
+ *   $text-styles 맵에 정의된 스타일 이름
+ * @example scss - 적용 예
+ *   .hero-title {
+ *     @include text-style('hero-title');
+ *   }
+ */
+.sec01 {
+  padding: 80px 0;
+}
+.sec01 .sec01_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.sec01 .sec01_container .sec01_titleForm {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_title {
+  color: #1F2124;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .sec01 .sec01_container .sec01_titleForm .sec01_title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_title .sec01_c_title {
+  color: #536957;
+}
+.sec01 .sec01_container .sec01_titleForm .sec01_subtitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #7B848D;
+}
+@media (min-width: 768px) {
+  .sec01 .sec01_container .sec01_titleForm .sec01_subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+@media (max-width: 767px) {
+  .sec01 .sec01_container .sec01_img {
+    padding: 0 24px;
+  }
+}
+.sec01 .sec01_container .sec01_img img {
+  border-radius: 42px;
+  height: 45vh;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .sec01 .sec01_container .sec01_img img {
+    height: 40vh;
+  }
+}
+
+.dining-sec02 {
+  padding: 80px 0;
+}
+.dining-sec02 .dining-sec02-title {
+  text-align: center;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  color: #536957;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .dining-sec02 .dining-sec02-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.dining-sec02 .dining_sec02_swiper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 {
+  margin-bottom: 80px;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
+  background-color: #F8F9FA;
+  border-radius: 42px;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_img_form .sec02_img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title {
+  display: flex;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+  color: #1F2124;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title .dining-icon {
+  margin-left: auto;
+  color: #fff;
+  background-color: #1F2124;
+  border-radius: 4px;
+  font-size: 28px;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title .dining-icon i {
+  margin: 2px;
+}
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_des {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #7B848D;
+}
+@media (min-width: 768px) {
+  .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_des {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+.dining-sec02 .dining_sec02_swiper .dining-prev,
+.dining-sec02 .dining_sec02_swiper .dining-next,
+.dining-sec02 .dining_sec02_swiper .dining-page {
+  position: absolute;
+  z-index: 10;
+}
+.dining-sec02 .dining_sec02_swiper .dining-page {
+  width: 5%;
+  left: 50%;
+}
+.dining-sec02 .dining_sec02_swiper .dining-prev {
+  left: 48%;
+  top: 96%;
+}
+.dining-sec02 .dining_sec02_swiper .dining-prev::before {
+  content: "\e120";
+  color: #1F2124;
+  opacity: 0.5;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec02 .dining_sec02_swiper .dining-next {
+  right: 43%;
+  top: 96%;
+}
+.dining-sec02 .dining_sec02_swiper .dining-next::before {
+  content: "\e122";
+  color: #1F2124;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec02 .modal .modal-dialog {
+  max-width: 800px;
+  margin: 5rem auto;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-header .dining-modal_title {
+  margin: 0 auto;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-header .btn-close {
+  margin: 0;
+  margin-left: auto;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body {
+  display: flex;
+  gap: 0 24px;
+}
+
+.dining-sec03 {
+  padding: 80px 0;
+}
+.dining-sec03 .dining-sec03-title {
+  text-align: center;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  color: #536957;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .dining-sec03 .dining-sec03-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.dining-sec03 .dining_sec03_swiper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 {
+  margin-bottom: 80px;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
+  background-color: #F8F9FA;
+  border-radius: 42px;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_img_form .sec03_img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title {
+  display: flex;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: normal;
+  color: #1F2124;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title .dining-icon {
+  margin-left: auto;
+  color: #fff;
+  background-color: #1F2124;
+  border-radius: 4px;
+  font-size: 28px;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title .dining-icon i {
+  margin: 2px;
+}
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_des {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #7B848D;
+}
+@media (min-width: 768px) {
+  .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_des {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+.dining-sec03 .dining_sec03_swiper .dining-prev,
+.dining-sec03 .dining_sec03_swiper .dining-next,
+.dining-sec03 .dining_sec03_swiper .dining-page {
+  position: absolute;
+  z-index: 10;
+}
+.dining-sec03 .dining_sec03_swiper .dining-page {
+  width: 5%;
+  left: 50%;
+}
+.dining-sec03 .dining_sec03_swiper .dining-prev {
+  left: 48%;
+  top: 96%;
+}
+.dining-sec03 .dining_sec03_swiper .dining-prev::before {
+  content: "\e120";
+  color: #1F2124;
+  opacity: 0.5;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec03 .dining_sec03_swiper .dining-next {
+  right: 43%;
+  top: 96%;
+}
+.dining-sec03 .dining_sec03_swiper .dining-next::before {
+  content: "\e122";
+  color: #1F2124;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec03 .modal .modal-dialog {
+  max-width: 800px;
+  margin: 5rem auto;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-header .dining-modal_title {
+  margin: 0 auto;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-header .btn-close {
+  margin: 0;
+  margin-left: auto;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body {
+  display: flex;
+  gap: 0 24px;
+}
+
 .header {
   position: fixed;
   top: 0;

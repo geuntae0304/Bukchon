@@ -1,0 +1,265 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+.sec01{
+    padding: 80px 0;
+    .sec01_container{
+        max-width: 1440px;
+        margin: 0 auto;
+        .sec01_titleForm{
+        margin-bottom: 4rem;
+        text-align: center;
+            .sec01_title{
+                color: $gray-900;
+                @include text-style('hero-title');
+                margin-bottom: 2rem;
+                .sec01_c_title{
+                    color: $primary-color-dark;
+                }
+            }
+            .sec01_subtitle{
+                @include text-style('subpage-desc');
+                color: $gray-500;
+            }
+        }
+        .sec01_img{
+            @include mobile{
+                padding: 0 24px;
+            }
+            img{
+                border-radius: 42px;
+                height: 45vh;
+                width: 100%;
+                @include mobile{
+                    height: 40vh;
+                }
+                
+            }
+        }
+    }
+}
+.dining-sec02{
+    padding: 80px 0;
+    .dining-sec02-title{
+        text-align: center;
+        @include text-style('hero-title');
+        color: $primary-color-dark;
+        margin-bottom: 50px;
+    }
+    .dining_sec02_swiper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    .mb-80{
+        margin-bottom: 80px;
+        .sec02_slide{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 30px;
+            background-color: $gray-50;
+            border-radius: 42px;
+            .sec02_img_form{
+                .sec02_img{
+                    width: 100%;
+                    border-radius: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+            .sec02_content_form{
+                .sec02_title{
+                    display: flex;
+                    @include text-style('image-subtitle');
+                    color: $gray-900;
+                    margin-bottom: 20px;
+                    .dining-icon{
+                        margin-left: auto;
+                        color: #fff;
+                        background-color: $gray-900;
+                        border-radius: 4px;
+                        font-size: 28px;
+                        i{
+                            margin: 2px;
+                        }
+                    }
+                }
+                .sec02_des{
+                    @include text-style('button-font');
+                    color: $gray-500
+                }
+                
+            }
+        } 
+    }
+    .dining-prev,
+    .dining-next,
+    .dining-page {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .dining-page{
+        width: 5%;
+        left: 50%;
+    }
+
+    .dining-prev {
+        left: 48%;
+        top: 96%;
+    }
+    .dining-prev::before{
+        content: "\e120";
+        color: $gray-900;
+        opacity: 0.5;
+        font-family: phosphor;
+        font-size: 30px;
+    }
+    
+    .dining-next {
+        right: 43%;
+        top: 96%;
+    }
+    .dining-next::before{
+        content: "\e122";
+        color: $gray-900;
+        font-family: phosphor;
+        font-size: 30px;
+    }
+}
+    .modal{
+        .modal-dialog{
+            max-width: 800px;
+            margin: 5rem auto;
+            .modal-content{
+                .modal-header{
+                    .dining-modal_title{
+                        margin: 0 auto;
+                    }
+                    .btn-close{
+                        margin: 0;
+                        margin-left: auto;
+                    }
+                }
+                .modal-body{
+                    display: flex;
+                    gap: 0 24px;
+                }
+            }
+        }
+        
+    }
+}
+
+.dining-sec03{
+    padding: 80px 0;
+    .dining-sec03-title{
+        text-align: center;
+        @include text-style('hero-title');
+        color: $primary-color-dark;
+        margin-bottom: 50px;
+    }
+    .dining_sec03_swiper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    .mb-80{
+        margin-bottom: 80px;
+        .sec03_slide{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 30px;
+            background-color: $gray-50;
+            border-radius: 42px;
+            .sec03_img_form{
+                .sec03_img{
+                    width: 100%;
+                    border-radius: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+            .sec03_content_form{
+                .sec03_title{
+                    display: flex;
+                    @include text-style('image-subtitle');
+                    color: $gray-900;
+                    margin-bottom: 20px;
+                    .dining-icon{
+                        margin-left: auto;
+                        color: #fff;
+                        background-color: $gray-900;
+                        border-radius: 4px;
+                        font-size: 28px;
+                        i{
+                            margin: 2px;
+                        }
+                    }
+                }
+                .sec03_des{
+                    @include text-style('button-font');
+                    color: $gray-500
+                }
+                
+            }
+        } 
+    }
+    .dining-prev,
+    .dining-next,
+    .dining-page {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .dining-page{
+        width: 5%;
+        left: 50%;
+    }
+
+    .dining-prev {
+        left: 48%;
+        top: 96%;
+    }
+    .dining-prev::before{
+        content: "\e120";
+        color: $gray-900;
+        opacity: 0.5;
+        font-family: phosphor;
+        font-size: 30px;
+    }
+    
+    .dining-next {
+        right: 43%;
+        top: 96%;
+    }
+    .dining-next::before{
+        content: "\e122";
+        color: $gray-900;
+        font-family: phosphor;
+        font-size: 30px;
+    }
+}
+    .modal{
+        .modal-dialog{
+            max-width: 800px;
+            margin: 5rem auto;
+            .modal-content{
+                .modal-header{
+                    .dining-modal_title{
+                        margin: 0 auto;
+                    }
+                    .btn-close{
+                        margin: 0;
+                        margin-left: auto;
+                    }
+                }
+                .modal-body{
+                    display: flex;
+                    gap: 0 24px;
+                }
+            }
+        }
+        
+    }
+}
+
+
