@@ -135,12 +135,36 @@
 }
     .modal{
         .modal-dialog{
-            max-width: 800px;
+            max-width: 1100px;
             margin: 5rem auto;
+            
             .modal-content{
+                padding: 30px;
+                background-color: $gray-100;
+                .btn-close{
+                    margin-left: auto;
+                    background: url(../images/dining/modal-close.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 100%;
+                    font-size: 18px;
+                }
                 .modal-header{
+                    padding: 0;
+                    margin: 0 100px;
                     .dining-modal_title{
                         margin: 0 auto;
+                        .modal-title{
+                            font-size: 2rem;
+                            font-weight: 700;
+                            font-family: 'Paperlogy';
+                            color: $primary-color-dark;
+                        }
+                        .modal-subtitle{
+                            @include text-style('subpage-desc');
+                            color: $gray-900;
+                        }
                     }
                     .btn-close{
                         margin: 0;
@@ -149,7 +173,36 @@
                 }
                 .modal-body{
                     display: flex;
-                    gap: 0 24px;
+                    justify-content: space-between;
+                    padding: 1rem 0;
+                    margin: 0 100px;
+                    .d-modal-card01,
+                    .d-modal-card02,
+                    .d-modal-card03{
+                        width: 250px;
+                        height: 338px;
+                        .dinig-modal-imgform{
+                            margin-bottom: 20px;
+                            .dining-modal-card{
+                                width: 280px;
+                                height: 200px;
+                                border-radius: 30px;
+                            }
+                        }
+                        .dinig-modal-content{
+                            .dining-modal-menu{
+                                @include text-style('button-font');
+                                color: $gray-900;
+                            }
+                            .dining-modal-des{
+                                font-family: 'Paperlogy';
+                                font-size: 0.9rem;
+                                font-weight: 400;
+                                line-height: 140%;
+                                color: $gray-400;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -254,12 +307,36 @@
 }
     .modal{
         .modal-dialog{
-            max-width: 800px;
+            max-width: 1100px;
             margin: 5rem auto;
+            
             .modal-content{
+                padding: 30px;
+                background-color: $gray-100;
+                .btn-close{
+                    margin-left: auto;
+                    background: url(../images/dining/modal-close.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 100%;
+                    font-size: 18px;
+                }
                 .modal-header{
+                    padding: 0;
+                    margin: 0 100px;
                     .dining-modal_title{
                         margin: 0 auto;
+                        .modal-title{
+                            font-size: 2rem;
+                            font-weight: 700;
+                            font-family: 'Paperlogy';
+                            color: $primary-color-dark;
+                        }
+                        .modal-subtitle{
+                            @include text-style('subpage-desc');
+                            color: $gray-900;
+                        }
                     }
                     .btn-close{
                         margin: 0;
@@ -268,7 +345,36 @@
                 }
                 .modal-body{
                     display: flex;
-                    gap: 0 24px;
+                    justify-content: space-between;
+                    padding: 1rem 0;
+                    margin: 0 100px;
+                    .d-modal-card01,
+                    .d-modal-card02,
+                    .d-modal-card03{
+                        width: 250px;
+                        height: 338px;
+                        .dinig-modal-imgform{
+                            margin-bottom: 20px;
+                            .dining-modal-card{
+                                width: 280px;
+                                height: 200px;
+                                border-radius: 30px;
+                            }
+                        }
+                        .dinig-modal-content{
+                            .dining-modal-menu{
+                                @include text-style('button-font');
+                                color: $gray-900;
+                            }
+                            .dining-modal-des{
+                                font-family: 'Paperlogy';
+                                font-size: 0.9rem;
+                                font-weight: 400;
+                                line-height: 140%;
+                                color: $gray-400;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -284,7 +390,7 @@
         text-align: center;
         @include text-style('hero-title');
         color: $primary-color-dark;
-        margin-bottom: 50px;
+        margin-bottom: 50px; 
     }
     .dining-sec04-cardform{
         position: relative;
@@ -373,12 +479,36 @@
 }
     .modal{
         .modal-dialog{
-            max-width: 800px;
+            max-width: 1100px;
             margin: 5rem auto;
+            
             .modal-content{
+                padding: 30px;
+                background-color: $gray-100;
+                .btn-close{
+                    margin-left: auto;
+                    background: url(../images/dining/modal-close.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 100%;
+                    font-size: 18px;
+                }
                 .modal-header{
+                    padding: 0;
+                    margin: 0 100px;
                     .dining-modal_title{
                         margin: 0 auto;
+                        .modal-title{
+                            font-size: 2rem;
+                            font-weight: 700;
+                            font-family: 'Paperlogy';
+                            color: $primary-color-dark;
+                        }
+                        .modal-subtitle{
+                            @include text-style('subpage-desc');
+                            color: $gray-900;
+                        }
                     }
                     .btn-close{
                         margin: 0;
@@ -387,11 +517,39 @@
                 }
                 .modal-body{
                     display: flex;
-                    gap: 0 24px;
+                    justify-content: space-between;
+                    padding: 1rem 0;
+                    margin: 0 100px;
+                    .d-modal-card01,
+                    .d-modal-card02,
+                    .d-modal-card03{
+                        width: 250px;
+                        height: 338px;
+                        .dinig-modal-imgform{
+                            margin-bottom: 20px;
+                            .dining-modal-card{
+                                width: 280px;
+                                height: 200px;
+                                border-radius: 30px;
+                            }
+                        }
+                        .dinig-modal-content{
+                            .dining-modal-menu{
+                                @include text-style('button-font');
+                                color: $gray-900;
+                            }
+                            .dining-modal-des{
+                                font-family: 'Paperlogy';
+                                font-size: 0.9rem;
+                                font-weight: 400;
+                                line-height: 140%;
+                                color: $gray-400;
+                            }
+                        }
+                    }
                 }
             }
-        }
-        
+        } 
     }
 }
 

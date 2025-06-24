@@ -771,43 +771,30 @@ select {
 }
 .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title {
   display: flex;
-  font-family: "Paperlogy", sans-serif;
-  font-size: 1.125rem;
+  color: #1F2124;
+  font-family: "Paperlogy";
   font-weight: 600;
   line-height: normal;
-  color: #1F2124;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    line-height: normal;
-  }
+  font-size: 1.4rem;
 }
 .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title .dining-icon {
   margin-left: auto;
   color: #fff;
   background-color: #1F2124;
-  border-radius: 4px;
-  font-size: 28px;
+  border-radius: 3px;
+  font-size: 24px;
 }
 .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_title .dining-icon i {
   margin: 2px;
 }
 .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_des {
-  font-family: "Pretendard", sans-serif;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 140%;
   color: #7B848D;
 }
-@media (min-width: 768px) {
-  .dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_des {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 140%;
-  }
+.dining-sec02 .dining_sec02_swiper .mb-80 .sec02_slide .sec02_content_form .sec02_des .bold {
+  font-weight: 600;
 }
 .dining-sec02 .dining_sec02_swiper .dining-prev,
 .dining-sec02 .dining_sec02_swiper .dining-next,
@@ -821,7 +808,7 @@ select {
 }
 .dining-sec02 .dining_sec02_swiper .dining-prev {
   left: 48%;
-  top: 96%;
+  top: 96.5%;
 }
 .dining-sec02 .dining_sec02_swiper .dining-prev::before {
   content: "\e120";
@@ -832,7 +819,7 @@ select {
 }
 .dining-sec02 .dining_sec02_swiper .dining-next {
   right: 43%;
-  top: 96%;
+  top: 96.5%;
 }
 .dining-sec02 .dining_sec02_swiper .dining-next::before {
   content: "\e122";
@@ -841,11 +828,48 @@ select {
   font-size: 30px;
 }
 .dining-sec02 .modal .modal-dialog {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 5rem auto;
+}
+.dining-sec02 .modal .modal-dialog .modal-content {
+  padding: 30px;
+  background-color: #F1F3F5;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .btn-close {
+  margin-left: auto;
+  background: url(../images/dining/modal-close.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 100%;
+  font-size: 18px;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  margin: 0 100px;
 }
 .dining-sec02 .modal .modal-dialog .modal-content .modal-header .dining-modal_title {
   margin: 0 auto;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Paperlogy";
+  color: #536957;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec02 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
 }
 .dining-sec02 .modal .modal-dialog .modal-content .modal-header .btn-close {
   margin: 0;
@@ -853,7 +877,54 @@ select {
 }
 .dining-sec02 .modal .modal-dialog .modal-content .modal-body {
   display: flex;
-  gap: 0 24px;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 0 100px;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 {
+  width: 250px;
+  height: 338px;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform {
+  margin-bottom: 20px;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform .dining-modal-card,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform .dining-modal-card,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform .dining-modal-card {
+  width: 280px;
+  height: 200px;
+  border-radius: 30px;
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+  .dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+  .dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-des,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-des,
+.dining-sec02 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-des {
+  font-family: "Paperlogy";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #AAB2B9;
 }
 
 .dining-sec03 {
@@ -897,43 +968,31 @@ select {
 }
 .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title {
   display: flex;
-  font-family: "Paperlogy", sans-serif;
-  font-size: 1.125rem;
+  color: #1F2124;
+  font-family: "Paperlogy";
   font-weight: 600;
   line-height: normal;
-  color: #1F2124;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    line-height: normal;
-  }
+  font-size: 1.4rem;
 }
 .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title .dining-icon {
   margin-left: auto;
   color: #fff;
   background-color: #1F2124;
-  border-radius: 4px;
-  font-size: 28px;
+  border-radius: 3px;
+  font-size: 24px;
 }
 .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_title .dining-icon i {
   margin: 2px;
 }
 .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_des {
-  font-family: "Pretendard", sans-serif;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 140%;
   color: #7B848D;
+  color: #7B848D;
 }
-@media (min-width: 768px) {
-  .dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_des {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 140%;
-  }
+.dining-sec03 .dining_sec03_swiper .mb-80 .sec03_slide .sec03_content_form .sec03_des .bold {
+  font-weight: 600;
 }
 .dining-sec03 .dining_sec03_swiper .dining-prev,
 .dining-sec03 .dining_sec03_swiper .dining-next,
@@ -947,7 +1006,7 @@ select {
 }
 .dining-sec03 .dining_sec03_swiper .dining-prev {
   left: 48%;
-  top: 96%;
+  top: 96.5%;
 }
 .dining-sec03 .dining_sec03_swiper .dining-prev::before {
   content: "\e120";
@@ -958,7 +1017,7 @@ select {
 }
 .dining-sec03 .dining_sec03_swiper .dining-next {
   right: 43%;
-  top: 96%;
+  top: 96.5%;
 }
 .dining-sec03 .dining_sec03_swiper .dining-next::before {
   content: "\e122";
@@ -967,11 +1026,48 @@ select {
   font-size: 30px;
 }
 .dining-sec03 .modal .modal-dialog {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 5rem auto;
+}
+.dining-sec03 .modal .modal-dialog .modal-content {
+  padding: 30px;
+  background-color: #F1F3F5;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .btn-close {
+  margin-left: auto;
+  background: url(../images/dining/modal-close.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 100%;
+  font-size: 18px;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  margin: 0 100px;
 }
 .dining-sec03 .modal .modal-dialog .modal-content .modal-header .dining-modal_title {
   margin: 0 auto;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Paperlogy";
+  color: #536957;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec03 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
 }
 .dining-sec03 .modal .modal-dialog .modal-content .modal-header .btn-close {
   margin: 0;
@@ -979,7 +1075,251 @@ select {
 }
 .dining-sec03 .modal .modal-dialog .modal-content .modal-body {
   display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 0 100px;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 {
+  width: 250px;
+  height: 338px;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform {
+  margin-bottom: 20px;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform .dining-modal-card,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform .dining-modal-card,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform .dining-modal-card {
+  width: 280px;
+  height: 200px;
+  border-radius: 30px;
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+  .dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+  .dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-des,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-des,
+.dining-sec03 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-des {
+  font-family: "Paperlogy";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #AAB2B9;
+}
+
+.dining-sec04 {
+  padding: 80px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.dining-sec04 .dining-sec04-title {
+  text-align: center;
+  font-family: "Paperlogy", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 160%;
+  color: #536957;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .dining-sec04 .dining-sec04-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+.dining-sec04 .dining-sec04-cardform {
+  position: relative;
+  display: flex;
   gap: 0 24px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card {
+  box-sizing: border-box;
+  width: 33%;
+  padding: 30px;
+  background-color: #F8F9FA;
+  border-radius: 42px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_img_form .sec04_img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_content_form .sec04_title {
+  display: flex;
+  color: #1F2124;
+  font-family: "Paperlogy";
+  font-weight: 600;
+  line-height: normal;
+  font-size: 1.4rem;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_content_form .sec04_title .dining-icon {
+  margin-left: auto;
+  color: #fff;
+  background-color: #1F2124;
+  border-radius: 3px;
+  font-size: 24px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_content_form .sec04_title .dining-icon i {
+  margin: 2px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_content_form .sec04_des {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #7B848D;
+  color: #7B848D;
+}
+.dining-sec04 .dining-sec04-cardform .dining-sec04-card .sec04_content_form .sec04_des .bold {
+  font-weight: 600;
+}
+.dining-sec04 .dining-sec04-cardform .dining-prev,
+.dining-sec04 .dining-sec04-cardform .dining-next,
+.dining-sec04 .dining-sec04-cardform .dining-page {
+  position: absolute;
+  z-index: 10;
+}
+.dining-sec04 .dining-sec04-cardform .dining-page {
+  width: 5%;
+  left: 50%;
+}
+.dining-sec04 .dining-sec04-cardform .dining-prev {
+  left: 48%;
+  top: 96.5%;
+}
+.dining-sec04 .dining-sec04-cardform .dining-prev::before {
+  content: "\e120";
+  color: #1F2124;
+  opacity: 0.5;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec04 .dining-sec04-cardform .dining-next {
+  right: 43%;
+  top: 96.5%;
+}
+.dining-sec04 .dining-sec04-cardform .dining-next::before {
+  content: "\e122";
+  color: #1F2124;
+  font-family: phosphor;
+  font-size: 30px;
+}
+.dining-sec04 .modal .modal-dialog {
+  max-width: 1100px;
+  margin: 5rem auto;
+}
+.dining-sec04 .modal .modal-dialog .modal-content {
+  padding: 30px;
+  background-color: #F1F3F5;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .btn-close {
+  margin-left: auto;
+  background: url(../images/dining/modal-close.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 100%;
+  font-size: 18px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  margin: 0 100px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-header .dining-modal_title {
+  margin: 0 auto;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Paperlogy";
+  color: #536957;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec04 .modal .modal-dialog .modal-content .modal-header .dining-modal_title .modal-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-header .btn-close {
+  margin: 0;
+  margin-left: auto;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 0 100px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 {
+  width: 250px;
+  height: 338px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform {
+  margin-bottom: 20px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-imgform .dining-modal-card,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-imgform .dining-modal-card,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-imgform .dining-modal-card {
+  width: 280px;
+  height: 200px;
+  border-radius: 30px;
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #1F2124;
+}
+@media (min-width: 768px) {
+  .dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-menu,
+  .dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-menu,
+  .dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-menu {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card01 .dinig-modal-content .dining-modal-des,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card02 .dinig-modal-content .dining-modal-des,
+.dining-sec04 .modal .modal-dialog .modal-content .modal-body .d-modal-card03 .dinig-modal-content .dining-modal-des {
+  font-family: "Paperlogy";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #AAB2B9;
 }
 
 .header {
