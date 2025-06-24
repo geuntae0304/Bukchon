@@ -52,16 +52,65 @@
             <div class="sec01-title">
                 <h2>Visiting Bukchon By Subway</h2>
             </div>
-            <div class="dropdown-container">
-                <button class="dropdown-button" id="dropdownButton">Select Departing Station</button>
-                <div class="dropdown-list" id="dropdownList">
-                    <div class="dropdown-item" data-value="from gangnam"><p>From Gangnam</p></div>
-                    <div class="dropdown-item" data-value="from itaewon"><p>From Itaewon</p></div>
-                    <div class="dropdown-item" data-value="from hongdae"><p>From Hongdae</p></div>
-                    <div class="dropdown-item" data-value="from myeongdong"><p>From Myeongdong</p></div>
-                    <div class="dropdown-item" data-value="from seongsu"><p>From Seongsu</p></div>
+            <div class="dropdown">
+                <div class="dropdown-btn">
+                    <button id="dropdownButton">From Gangnam ▼</button>
+                </div>
+                <ul id="dropdownList" class="dropdown-list">
+                    <li data-option="gangnam">From Gangnam</li>
+                    <li data-option="itaewon">From Itaewon</li>
+                    <li data-option="seongsu">From Seongsu</li>
+                    <li data-option="myeongdong">From Myeongdong</li>
+                    <li data-option="hongdae">From Hongdae</li>
+                </ul>
+            </div>
+            <div class="subway-images" id="subwayImages">
+                <!-- Images will change based on dropdown selection -->
+                <div>
+                    <img id="img1" src="assets/images/visit/step1.png" alt="route image 1" />
+                </div>
+                <div>
+                    <img id="img2" src="assets/images/visit/from-gangnam.png" alt="route image 2" />
                 </div>
             </div>
+            <div class="png-download">
+                <div class="title-flex">
+                    <h4>Download PNG file</h4>
+                </div>
+                <div class="sub-contents">
+                    <div class="each-content">
+                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Gangnam</a></p>
+                        <div class="p-l-10">
+                            <i class="ph ph-download-simple"></i>
+                        </div>
+                    </div>
+                    <div class="each-content">
+                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Itaewon</a></p>
+                        <div class="p-l-10">
+                            <i class="ph ph-download-simple"></i>
+                        </div>
+                    </div>
+                    <div class="each-content">
+                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Seongsu</a></p>
+                        <div class="p-l-10">
+                            <i class="ph ph-download-simple"></i>
+                        </div>
+                    </div>
+                    <div class="each-content">
+                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Myeongdong</a></p>
+                        <div class="p-l-10">
+                            <i class="ph ph-download-simple"></i>
+                        </div>
+                    </div>
+                    <div class="each-content">
+                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Hongdae</a></p>
+                        <div class="p-l-10">
+                            <i class="ph ph-download-simple"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -238,45 +287,66 @@
             }
         });
 
-        const dropdownButton = document.getElementById('dropdownButton');
-        const dropdownList = document.getElementById('dropdownList');
-        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const dropdownButton = document.getElementById("dropdownButton");
+        const dropdownList = document.getElementById("dropdownList");
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+
+        const imageData = {
+            gangnam: [
+                "assets/images/visit/step1.png",
+                "assets/images/visit/from-gangnam.png"
+            ],
+            itaewon: [
+                "assets/images/visit/step3.png",
+                "assets/images/visit/from-itaewon.png"
+            ],
+            seongsu: [
+                "https://via.placeholder.com/300x200/ADD8E6/000000?text=Seongsu+Map",
+                "assets/images/visit/from-seongsu.png"
+            ],
+            myeongdong: [
+                "https://via.placeholder.com/300x200/FFA07A/000000?text=Myeongdong+Map",
+                "assets/images/visit/from-myeongdong.png"
+            ],
+            hongdae: [
+                "https://via.placeholder.com/300x200/DDA0DD/000000?text=Hongdae+Map",
+                "assets/images/visit/from-hongdae.png"
+            ]
+        };
 
         // Toggle dropdown
-        dropdownButton.addEventListener('click', () => {
-            dropdownList.classList.toggle('open');
-            dropdownButton.classList.toggle('open');
+        dropdownButton.addEventListener("click", () => {
+            dropdownList.style.display = dropdownList.style.display === "block" ? "none" : "block";
         });
 
-        // Handle item selection
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Update button text
-                dropdownButton.textContent = item.textContent;
-                dropdownButton.appendChild(document.createElement('span')); // For the arrow
+        // Change images based on selection
+        dropdownList.querySelectorAll("li").forEach((item) => {
+            item.addEventListener("click", () => {
+                const option = item.getAttribute("data-option");
+                const [imgSrc1, imgSrc2] = imageData[option];
 
-                // Remove selected class from all items
-                dropdownItems.forEach(i => i.classList.remove('selected'));
-                // Add selected class to clicked item
-                item.classList.add('selected');
+                // Remove and re-add fade-in class to trigger animation
+                [img1, img2].forEach((img, i) => {
+                    img.classList.remove("show", "fade-in");
+                    void img.offsetWidth; // reflow hack to reset animation
+                    img.src = i === 0 ? imgSrc1 : imgSrc2;
+                    img.classList.add("fade-in", "show");
+                });
 
-                // Close dropdown
-                dropdownList.classList.remove('open');
-                dropdownButton.classList.remove('open');
-
-                // Here you could do something with the selected value
-                const selectedValue = item.getAttribute('data-value');
-                console.log('Selected:', selectedValue);
+                dropdownButton.textContent = item.textContent + " ▼";
+                dropdownList.style.display = "none";
             });
+
         });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('.dropdown-container')) {
-                dropdownList.classList.remove('open');
-                dropdownButton.classList.remove('open');
+        // Close if clicked outside
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".dropdown")) {
+                dropdownList.style.display = "none";
             }
         });
+
     </script>
 </body>
 
