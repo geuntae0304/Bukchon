@@ -232,9 +232,7 @@
 
             #dropdownButton {
                 padding: 12px 20px;
-                font-size: 1rem;
-                font-family: $font-family-ui;
-                font-weight: 300;
+                font-size: 16px;
                 cursor: pointer;
                 background: $primary-color-dark;
                 color: $gray-100;
@@ -575,16 +573,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-    #visit-kv{
-        .container-kv{
-            max-width: 1100px;
-        }
-    }
-    #visit-sec01{
-        .visit-container-sec01{
-            max-width: 1100px;
-        }
-    }
     #visit-sec02 {
         .visit-container-sec02 {
             max-width: 1100px;
@@ -607,7 +595,6 @@
 @media screen and (max-width: 768px) {
     #visit-kv {
         .container-kv {
-            padding-top: 140px;
             .kv-subtitle {
                 p {
                     font-size: 1rem;
