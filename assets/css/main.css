@@ -31,7 +31,8 @@ body {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 img,
@@ -141,6 +142,42 @@ select {
  *     @include text-style('hero-title');
  *   }
  */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
 /* A Modern CSS Reset by Andy Bell */
 *,
 *::before,
@@ -171,7 +208,8 @@ body {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 img,
@@ -203,28 +241,10 @@ select {
   display: flex;
 }
 
-/**
- * @mixin mobile
- * @description
- *   모바일 화면 크기에서만 적용할 스타일을 정의하는 믹스인
- * @example scss - 적용 예
- *   .element {
- *     @include mobile {
- *       color: red;
- *     }
- *   }
- */
-/**
- * @mixin pc
- * @description
- *   PC 화면 크기에서만 적용할 스타일을 정의하는 믹스인
- * @example scss - 적용 예
- *   .element {
- *     @include pc {
- *       color: blue;
- *     }
- *   }
- */
+.p-80 {
+  padding: 80px 0;
+}
+
 /**
  * @mixin text-style($style-name)
  * @description
@@ -556,34 +576,124 @@ select {
     transform: translateX(30px);
   }
 }
-@keyframes fadeIn {
+.history-page {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.history-page span {
+  color: #F8A87C;
+}
+
+.history-page .history-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.history-page .history-section#history-intro {
+  background: url("../images/history/hero.png") no-repeat center center;
+  background-size: cover;
+}
+
+.history-page .history-section#history-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.history-page .history-section#history-intro .history-content {
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.history-page .history-section#history-intro .history-content h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .history-page .history-section#history-intro .history-content h2 {
+    font-size: 2.5rem;
+  }
+}
+.history-page .history-section#history-intro .history-content h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .history-page .history-section#history-intro .history-content h3 {
+    font-size: 1.8rem;
+  }
+}
+.history-page .history-section#history-intro .history-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+  .history-page .history-section#history-intro .history-content p {
+    font-size: 1rem;
+  }
+}
+.history-page .history-section#history-intro .history-content {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes fadeOut {
+@keyframes fadeInRight {
   from {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
-    opacity: 0;
-    transform: translateY(-10px);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
-.fade-in {
-  animation: fadeIn 0.5s ease forwards;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
-.fade-out {
-  animation: fadeOut 0.3s ease forwards;
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
 .welcome-modal {
   display: flex;
   position: fixed;
@@ -901,8 +1011,6 @@ select {
 .hero .container .scroll-icon i {
   font-size: 24px;
   animation: bounce 2s ease-in-out infinite;
-}/*# sourceMappingURL=main.css.map */
-=======
 }
 @media (max-width: 767px) {
   .hero .container .scroll-icon i {

@@ -10,11 +10,17 @@
 // 3. Semantic Colors: 실제 UI 요소에 의미를 부여하여 사용하는 색상 (Error, Warning, Success, Info 등)
 // 4. Status Colors: 상태를 나타내는 색상 (Active, Inactive, Disabled 등)
 
+// --- 기본 색상 ---
+$white: #FFFFFF;
+$black: #000000;
+
 
 // --- 1. Brand Colors ---
 // 브랜드의 정체성을 나타내는 색상
 $primary-color: #92B097;
 $primary-color-dark: #536957;
+$primary: #92B097;        // $primary-color와 동일한 값 사용
+$primary-light: #A8C2AD;  // $primary-color보다 밝은 색상
 
 $secondary-color: #998375;
 $secondary-color-dark: #5D473A;
