@@ -16,13 +16,25 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2>BUKCHON</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">About Bukchon</a></li>
+                <li><a href="public.html">Public Hanok</a></li>
+                <li><a href="#">Programs/Events</a></li>
+                <li><a href="dining.html">K-Cuisine/Cafe</a></li>
+                <li><a href="#">Tour Info</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <i class="ph-bold ph-list"></i>
+            </div>
+        </div>
     </header>
 
-    <section class="sec01">
+    <section class="public_sec01">
         <div class="sec01_container">
             <div class="sec01_titleForm">
                 <p class="sec01_title">
@@ -39,15 +51,11 @@
         </div>
     </section>
 
-        <section class="sec02">
-            <div class="swiper sec02_slider">
-                <!-- 추가한부분 -->
+        <section class="public_sec02">
+            <div class="swiper public_sec02_slider">
                 <div class="sec02-overlay sec02-mo-overlay">
                     <i class="ph ph-hand-swipe-left toch-icon"></i>
                 </div>
-                <!-- 추가한부분 -->
-
-
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide">
@@ -333,7 +341,7 @@
             </div>
         </section>
 
-        <section class="sec03">
+        <section class="public_sec03">
             <div class="sec03_form">
                 <p class="sec03_title">Explore the History <br class="d-none"> of Bukchon</p>
                 <a href="" class="sec03_btn">Learn More</a>
@@ -351,7 +359,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".sec02_slider", {
+        var swiper = new Swiper(".public_sec02_slider", {
             pagination: {
                 el: ".swiper-pagination",
                 type: "fraction",
