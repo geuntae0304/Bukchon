@@ -33,6 +33,7 @@
      *     @include text-style('hero-title');
      *   }
      */
+
 @mixin text-style($style-name) {
     // 맵에서 해당 스타일 정보 가져오기 
     $style: map-get($text-styles, $style-name);

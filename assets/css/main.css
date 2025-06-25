@@ -178,6 +178,46 @@ select {
   animation: fadeOut 0.3s ease forwards;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* A Modern CSS Reset by Andy Bell */
 *,
 *::before,
@@ -574,124 +614,6 @@ select {
   }
   50% {
     transform: translateX(30px);
-  }
-}
-.history-page {
-  height: 100vh;
-  overflow-y: hidden;
-}
-.history-page span {
-  color: #F8A87C;
-}
-
-.history-page .history-section {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  overflow: hidden;
-}
-
-.history-page .history-section#history-intro {
-  background: url("../images/history/hero.png") no-repeat center center;
-  background-size: cover;
-}
-
-.history-page .history-section#history-intro::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.history-page .history-section#history-intro .history-content {
-  text-align: center;
-  color: #FFFFFF;
-  max-width: 800px;
-  z-index: 2;
-}
-
-.history-page .history-section#history-intro .history-content h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 767px) {
-  .history-page .history-section#history-intro .history-content h2 {
-    font-size: 2.5rem;
-  }
-}
-.history-page .history-section#history-intro .history-content h3 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 767px) {
-  .history-page .history-section#history-intro .history-content h3 {
-    font-size: 1.8rem;
-  }
-}
-.history-page .history-section#history-intro .history-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-@media (max-width: 767px) {
-  .history-page .history-section#history-intro .history-content p {
-    font-size: 1rem;
-  }
-}
-.history-page .history-section#history-intro .history-content {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 .welcome-modal {
