@@ -10,26 +10,39 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .header ul li a {
+            color: #000 !important;
+        }
+
+        .header .logo h2 {
+            color: #000 !important;
+        }
+
+        .header .mobile-menu-icon i {
+            color: #000 !important;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <div class="logo">
-                <h2><a href="index.html">BUKCHON</a></h2>
+                <h2>BUKCHON</h2>
             </div>
             <ul>
-                <li><a href="#">About Bukchon</a></li>
-                <li><a href="#">Public Hanok</a></li>
-                <li><a href="#">Programs/Events</a></li>
-                <li><a href="#">K-Cuisine/Cafe</a></li>
-                <li><a href="#">Tour Info</a></li>
+                <li><a href="index.html">About Bukchon</a></li>
+                <li><a href="public.html">Public Hanok</a></li>
+                <li><a href="programs.html">Programs/Events</a></li>
+                <li><a href="dining.html">K-Cuisine/Cafe</a></li>
+                <li><a href="visit.html">Tour Info</a></li>
             </ul>
             <div class="mobile-menu-icon">
                 <i class="ph-bold ph-list"></i>
             </div>
         </div>
-    </header> -->
+    </header>
 
     <section id="visit-kv">
         <div class="container-kv">
@@ -38,7 +51,7 @@
             </div>
             <div class="kv-subtitle">
                 <p><span>The Anugk station, which is known as subway line #3, is the closest subway
-                        station</span><span>and about 10 minutes of walk distance from the Buckhon Hanok v   illage.
+                        station</span><span>and about 10 minutes of walk distance from the Buckhon Hanok v illage.
                     </span></p>
             </div>
             <div class="kv-img">
@@ -67,7 +80,7 @@
             <div class="subway-images" id="subwayImages">
                 <!-- Images will change based on dropdown selection -->
                 <div>
-                    <img id="img1" src="assets/images/visit/step1.png" alt="route image 1" />
+                    <img id="img1" src="assets/images/visit/gangnam-subway.png" alt="route image 1" />
                 </div>
                 <div>
                     <img id="img2" src="assets/images/visit/from-gangnam.png" alt="route image 2" />
@@ -79,33 +92,34 @@
                 </div>
                 <div class="sub-contents">
                     <div class="each-content">
-                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Gangnam</a></p>
+                        <p><a href="assets/images/visit/gangnam-subway.png" download="gangnam-to-bukchon">From Gangnam</a></p>
                         <div class="p-l-10">
-                            <i class="ph ph-download-simple"></i>
+                            <a href="assets/images/visit/gangnam-subway.png" download="gangnam-to-bukchon"><i class="ph ph-download-simple"></i></a>
                         </div>
                     </div>
                     <div class="each-content">
-                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Itaewon</a></p>
+                        <p><a href="assets/images/visit/itaewon-subway.png" download="itaewon-to-bukchon">From Itaewon</a></p>
                         <div class="p-l-10">
-                            <i class="ph ph-download-simple"></i>
+                            <a href="assets/images/visit/itaewon-subway.png" download="itaewon-to-bukchon"><i class="ph ph-download-simple"></i></a>
                         </div>
                     </div>
                     <div class="each-content">
-                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Seongsu</a></p>
+                        <p><a href="assets/images/visit/seongsu-subway.png" download="seongsu-to-bukchon">From Seongsu</a></p>
                         <div class="p-l-10">
-                            <i class="ph ph-download-simple"></i>
+                            <a href="assets/images/visit/seongsu-subway.png" download="seongsu-to-bukchon"><i class="ph ph-download-simple"></i></a>
                         </div>
                     </div>
                     <div class="each-content">
-                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Myeongdong</a></p>
+                        <p><a href="assets/images/visit/myeongdong-subway.png" download="meyongdong-to-bukchon">From Myeongdong</a></p>
                         <div class="p-l-10">
-                            <i class="ph ph-download-simple"></i>
+                            <a href="assets/images/visit/myeongdong-subway.png" download="meyongdong-to-bukchon"><i
+                                    class="ph ph-download-simple"></i></a>
                         </div>
                     </div>
                     <div class="each-content">
-                        <p><a href="assets/images/visit/from-gangnam.png" download="image">From Hongdae</a></p>
+                        <p><a href="assets/images/visit/hongdae-subway.png" download="hongdae-to-bukchon">From Hongdae</a></p>
                         <div class="p-l-10">
-                            <i class="ph ph-download-simple"></i>
+                            <a href="assets/images/visit/hongdae-subway.png" download="hongdae-to-bukchon"><i class="ph ph-download-simple"></i></a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +263,6 @@
     </section>
 
     <script>
-        // 스크롤 이벤트를 감지하여 헤더 스타일을 변경하는 스크립트
 
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.querySelector('.header');
@@ -287,6 +300,8 @@
             }
         });
 
+
+
         const dropdownButton = document.getElementById("dropdownButton");
         const dropdownList = document.getElementById("dropdownList");
         const img1 = document.getElementById("img1");
@@ -294,23 +309,23 @@
 
         const imageData = {
             gangnam: [
-                "assets/images/visit/step1.png",
+                "assets/images/visit/gangnam-subway.png",
                 "assets/images/visit/from-gangnam.png"
             ],
             itaewon: [
-                "assets/images/visit/step3.png",
+                "assets/images/visit/itaewon-subway.png",
                 "assets/images/visit/from-itaewon.png"
             ],
             seongsu: [
-                "https://via.placeholder.com/300x200/ADD8E6/000000?text=Seongsu+Map",
+                "assets/images/visit/seongsu-subway.png",
                 "assets/images/visit/from-seongsu.png"
             ],
             myeongdong: [
-                "https://via.placeholder.com/300x200/FFA07A/000000?text=Myeongdong+Map",
+                "assets/images/visit/myeongdong-subway.png",
                 "assets/images/visit/from-myeongdong.png"
             ],
             hongdae: [
-                "https://via.placeholder.com/300x200/DDA0DD/000000?text=Hongdae+Map",
+                "assets/images/visit/hongdae-subway.png",
                 "assets/images/visit/from-hongdae.png"
             ]
         };
