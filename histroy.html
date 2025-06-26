@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bukchon History</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <style>
+        /* 서브페이지 헤더 텍스트 컬러 블랙으로 설정 */
+        .header ul li a {
+            color: #000 !important;
+        }
+        .header .logo h2 {
+            color: #000 !important;
+        }
+        .header .mobile-menu-icon i {
+            color: #000 !important;
+        }
+    </style>
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2>BUKCHON</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">About Bukchon</a></li>
+                <li><a href="public.html">Public Hanok</a></li>
+                <li><a href="programs.html">Programs/Events</a></li>
+                <li><a href="dining.html">K-Cuisine/Cafe</a></li>
+                <li><a href="visit.html">Tour Info</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <i class="ph-bold ph-list"></i>
+            </div>
+        </div>
+    </header>
     <div class="history-page">
         <!-- Hero Section -->
         <section class="history-section" id="history-intro">
@@ -67,5 +98,6 @@
             <div class="img1"></div>
         </section>
     <script src="assets/js/history.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

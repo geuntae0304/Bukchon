@@ -19,10 +19,22 @@
     <!-- 아이콘 -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <style>
+        /* 서브페이지 헤더 텍스트 컬러 블랙으로 설정 */
+        .header ul li a {
+            color: #000 !important;
+        }
+        .header .logo h2 {
+            color: #000 !important;
+        } 
+        .header .mobile-menu-icon i {
+            color: #000 !important;
+        }
+    </style>
 </head>
- 
+
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <div class="logo">
                 <h2>BUKCHON</h2>
@@ -30,15 +42,15 @@
             <ul>
                 <li><a href="index.html">About Bukchon</a></li>
                 <li><a href="public.html">Public Hanok</a></li>
-                <li><a href="#">Programs/Events</a></li>
+                <li><a href="programs.html">Programs/Events</a></li>
                 <li><a href="dining.html">K-Cuisine/Cafe</a></li>
-                <li><a href="#">Tour Info</a></li>
+                <li><a href="visit.html">Tour Info</a></li>
             </ul>
             <div class="mobile-menu-icon">
                 <i class="ph-bold ph-list"></i>
             </div>
         </div>
-    </header> -->
+    </header>
 
     <section class="dining_sec01">
         <div class="sec01_container">
@@ -1164,6 +1176,46 @@
         //modal
 
     </script>
+    <script>
+        // 스크롤 이벤트를 감지하여 헤더 스타일을 변경하는 스크립트
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.header');
+            let lastScrollTop = 0; // 마지막 스크롤 위치 저장 변수
+            const scrollThreshold = 5; // 스크롤 감지 임계값 (매우 작게 설정)
+
+            // 스크롤 이벤트 리스너
+            window.addEventListener('scroll', function () {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                // 스크롤 방향 감지 (아래로 스크롤 = 헤더 숨김, 위로 스크롤 = 헤더 표시)
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    // 아래로 스크롤 중이고, 임계값 이상 스크롤됨
+                    header.classList.add('hide'); // 헤더 숨김
+                } else if (scrollTop < lastScrollTop) {
+                    // 위로 스크롤 중
+                    header.classList.remove('hide'); // 헤더 표시
+                }
+
+                // 스크롤 위치에 따라 배경 스타일 변경 (기존 기능 유지)
+                if (scrollTop > 10) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                    header.classList.remove('hide'); // 페이지 최상단에서는 항상 헤더 표시
+                }
+
+                // 현재 스크롤 위치 저장
+                lastScrollTop = scrollTop;
+            });
+
+            // 페이지 로드 시 초기 스크롤 위치에 따라 클래스 설정
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            }
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
