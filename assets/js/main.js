@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.add('hide'); // 헤더 숨김
         } else if (scrollTop < lastScrollTop) {
             // 위로 스크롤 중
-            header.classList.remove('hide'); // 헤더 표시
+            header.classList.remove('hide'); // 헤더 표시 
         }
         
         // 스크롤 위치에 따라 배경 스타일 변경 (기존 기능 유지)

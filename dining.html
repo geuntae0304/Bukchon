@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dining</title>
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/main.css">
+
+   
+    
+
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+   
+    
+    
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -26,7 +34,7 @@
         }
         .header .logo h2 {
             color: #000 !important;
-        }
+        } 
         .header .mobile-menu-icon i {
             color: #000 !important;
         }
@@ -39,7 +47,7 @@
             <div class="logo">
                 <h2>BUKCHON</h2>
             </div>
-            <ul>
+            <ul style="margin-top: 1rem;">
                 <li><a href="index.html">About Bukchon</a></li>
                 <li><a href="public.html">Public Hanok</a></li>
                 <li><a href="programs.html">Programs/Events</a></li>
@@ -56,11 +64,15 @@
         <div class="sec01_container">
             <div class="sec01_titleForm">
                 <p class="sec01_title">
-                    <span class="sec01_c_title">Korean Cusines</span> at Bukchon
+                    <span class="sec01_c_title">Korean Cusines</span><br class="none"> at Bukchon
                 </p>
-                <p class="sec01_subtitle">
+                <p class="sec01_subtitle01">
                     Flavorful and diverse blend of fermented, grilled, and seasoned,<br> vegetables, and meats, often
                     accompanied by a variety of side dishes like kimchi
+                </p>
+                <p class="sec01_subtitle02">
+                    From hanbok rentals to tea ceremonies, <br>
+                    discover what makes Bukchon unforgettable.
                 </p>
             </div>
             <div class="sec01_img">
@@ -180,7 +192,7 @@
         </div>
 
         <!-- modal -->
-        <div class="modal fade" id="staticBackdrop01" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop01" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -190,7 +202,7 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Dongbaek Sikdang</p>
                             <p class="modal-subtitle">10 Yunboseon-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                        
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -199,7 +211,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Bibim Gooksu <br class="none"> (₩11,000)</p>
+                                    <p>Bibim Gooksu (₩11,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Spicy-tangy gochujang bibim naengmyeon topped with veggies & boiled egg.</p>
@@ -212,7 +224,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Gom Soup <br class="none"> (₩10,000)</p>
+                                    <p>Gom Soup (₩10,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Rich, milky seolleongtang – beef bone and brisket soup simmered for hours.</p>
@@ -225,18 +237,19 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Bibimbap <br class="none"> (₩9,000)</p>
+                                    <p>Bibimbap (₩9,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Vibrant Korean rice dish topped with an assortment of seasoned vegetables, meat, a fried egg.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop02" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop02" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -255,7 +268,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>SamGyeopSal <br class="none"> (₩16,000)</p>
+                                    <p>SamGyeopSal (₩16,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Thick slices of juicy pork grilled at the table and wrapped in lettuce with garlic, ssamjang, and other flavorful toppings.</p>
@@ -268,7 +281,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Moksal <br class="none"> (₩18,000)</p>
+                                    <p>Moksal (₩18,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>A tender and flavorful cut grilled to perfection, offering a slightly leaner.</p>
@@ -281,18 +294,19 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>DoenJang JJigae <br class="none"> (₩9,000)</p>
+                                    <p>DoenJang JJigae (₩9,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Savory Korean soup made with fermented soybean paste, vegetables, tofu, and sometimes seafood or meat.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop03" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop03" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -311,7 +325,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Samgyetang <br class="none"> (₩18,000)</p>
+                                    <p>Samgyetang (₩18,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Nourishing Korean soup made with a whole young chicken stuffed with glutinous rice, garlic, jujube, and ginseng.</p>
@@ -324,7 +338,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Fried Insam <br class="none"> (₩12,000)</p>
+                                    <p>Fried Insam (₩12,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Fried insam (ginseng) is a crispy and aromatic Korean snack made by deep-frying whole ginseng roots, offering a slightly.</p>
@@ -337,18 +351,19 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Fried Chicken <br class="none"> (₩21,000)</p>
+                                    <p>Fried Chicken (₩21,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Korean fried chicken is ultra-crispy and juicy, often double-fried and coated in a variety of bold sauces like sweet soy garlic.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop04" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop04" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -367,7 +382,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Bossam <br class="none"> (₩28,000)</p>
+                                    <p>Bossam (₩28,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Flavorful Korean dish  of tender, thinly sliced boiled pork served with salted napa cabbage, garlic, and spicy radish salad.</p>
@@ -380,7 +395,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Beef Bulgogi <br class="none"> (₩20,000)</p>
+                                    <p>Beef Bulgogi (₩20,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Thinly sliced marinated beef grilled or stir-fried with a savory-sweet blend of soy sauce, garlic, sesame oil, and sugar.</p>
@@ -393,18 +408,19 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Nakji Jungsik <br class="none"> (₩16,000)</p>
+                                    <p>Nakji Jungsik (₩16,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Includes tender, spicy stir-fried octopus served alongside rice, assorted side dishes, and often fresh vegetables.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop05" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop05" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -414,7 +430,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Jeonda</p>
                             <p class="modal-subtitle">24 Bukchon-ro 4-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -423,7 +438,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Haemool Pa Jeon <br class="none">(₩18,000)</p>
+                                    <p>Haemool Pa Jeon (₩18,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Savory Korean pancake loaded with fresh seafood and green onions, pan-fried to a crispy golden brown.</p>
@@ -436,7 +451,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>GamJa Jeon <br class="none"> (₩13,000)</p>
+                                    <p>GamJa Jeon (₩13,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Crispy Korean potato pancake made from grated potatoes mixed with simple seasonings and pan-fried until golden and tender.</p>
@@ -449,18 +464,19 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Kimchi Jeon <br class="none"> (₩15,000)</p>
+                                    <p>Kimchi Jeonda (₩15,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Spicy and tangy Korean pancake made by mixing chopped kimchi into a savory batter and frying it until crispy and flavorful.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop06" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop06" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -470,7 +486,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Pungnyeon Ssal Nongsan</p>
                             <p class="modal-subtitle">32 Bukchon-ro 5ga-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -479,7 +494,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>TteokBokki <br class="none"> (₩5,000)</p>
+                                    <p>TteokBokki (₩5,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Street food dish featuring chewy rice cakes simmered in a spicy, sweet, and savory red chili paste sauce.</p>
@@ -492,7 +507,7 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Soondae <br class="none"> (₩4,000)</p>
+                                    <p>Soondae (₩4,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Korean blood sausage made by stuffing pig’s intestines with a mixture of sweet rice, noodles, and blood.</p>
@@ -505,13 +520,14 @@
                             </div>
                             <div class="dinig-modal-content">
                                 <div class="dining-modal-menu">
-                                    <p>Kimbap <br class="none"> (₩4,000)</p>
+                                    <p>Kimbap (₩4,000)</p>
                                 </div>
                                 <div class="dining-modal-des">
                                     <p>Korean dish of seasoned rice and various fillings like vegetables, meat, and pickles, all neatly rolled in seaweed.</p>
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
@@ -625,7 +641,7 @@
         </div>
 
         <!-- modal -->
-        <div class="modal fade" id="staticBackdrop07" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop07" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -677,11 +693,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop08" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop08" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -733,11 +750,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop09" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop09" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -789,11 +807,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop10" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -803,7 +822,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">O New House</p>
                             <p class="modal-subtitle">17 Bukchon-ro 5ga-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -845,11 +863,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop11" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -859,7 +878,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Ashville Bakery Cafe</p>
                             <p class="modal-subtitle">5-5 Bukchon-ro 5-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -901,11 +919,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop12" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -915,7 +934,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Gabae langsom insadong cafe</p>
                             <p class="modal-subtitle">37 Insadong-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -957,6 +975,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
@@ -1014,7 +1033,7 @@
         </div>
 
         <!-- modal -->
-        <div class="modal fade" id="staticBackdrop13" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop13" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -1022,9 +1041,8 @@
                     <div class="modal-header">
                         <div class="dining-modal_title">
                             <p class="modal-title text-center" id="staticBackdropLabel">YeonNam Toma</p>
-                            <p class="modal-subtitle">Seoul, Jongno District, Bukchon-ro 5-gil, ３９ 1F</p>
+                            <p class="modal-subtitle">Seoul, Jongno District, Bukchon-ro 5-gil, 1F</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -1066,11 +1084,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="staticBackdrop14" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop14" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -1080,7 +1099,6 @@
                             <p class="modal-title text-center" id="staticBackdropLabel">Insadong Geujip</p>
                             <p class="modal-subtitle">3 Insadong 12-gil, Jongno District, Seoul</p>
                         </div>
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="d-modal-card01">
@@ -1122,10 +1140,12 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="button" class="m-btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
+        
     </section>
 
 
@@ -1216,6 +1236,21 @@
         });
     </script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <h2>BUKCHON</h2>
+            </div>
+            <div class="footer-info">
+                <p class="info-title">Bukchon Hanok Village</p>
+                <p class="info-text">Eunbin Choi, Akyoung Jeoh, Youngyun Kim</p>
+                <p class="info-text">Business Identity: 101-21-070404</p>
+                <p class="copyright">COPYRIGHT 2025 Bukchon Hanok Village. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

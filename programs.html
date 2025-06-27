@@ -10,15 +10,16 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
     <link rel="stylesheet" href="assets/css/main.css">
-
     <style>
-        /* 서브페이지 헤더 텍스트 컬러 블랙으로 설정 */
         .header ul li a {
             color: #000 !important;
         }
-        .header .logo h2 {
+
+        .header .logo h2 a{
             color: #000 !important;
+            text-decoration: none;
         }
+
         .header .mobile-menu-icon i {
             color: #000 !important;
         }
@@ -26,7 +27,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -241,14 +241,28 @@
                 // 현재 스크롤 위치 저장
                 lastScrollTop = scrollTop;
             });
-
+            
             // 페이지 로드 시 초기 스크롤 위치에 따라 클래스 설정
             if (window.scrollY > 10) {
                 header.classList.add('scrolled');
             }
         });
     </script>
-    <script src="assets/js/main.js"></script>
-</body>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <h2>BUKCHON</h2>
+                </div>
+                <div class="footer-info">
+                    <p class="info-title">Bukchon Hanok Village</p>
+                    <p class="info-text">Eunbin Choi, Akyoung Jeoh, Youngyun Kim</p>
+                    <p class="info-text">Business Identity: 101-21-070404</p>
+                    <p class="copyright">COPYRIGHT 2025 Bukchon Hanok Village. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </body>
 
-</html>
+    </html>

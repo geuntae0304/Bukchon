@@ -1,150 +1,3 @@
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    height: 80px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-
-    // 기본 상태(투명할 때)에서 텍스트는 흰색
-    h2 {
-        font-family: $font-family-title;
-        font-weight: 600;
-        font-size: 18px;
-        text-decoration: none;
-        color: #fff;
-        transition: color 0.3s ease;
-
-        a{
-            text-decoration: none;
-        }
-    }
-
-    // 스크롤 시 적용 스타일
-    &.scrolled {
-        background-color: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        h2 {
-            color: $gray-900;
-        }
-        .container {
-            // 스크롤 시 햄버거 아이콘 색상 변경
-            .mobile-menu-icon {
-                color: $gray-900;
-            }
-
-            ul li a {
-                color: $gray-900;
-
-                // 스크롤 후 호버 시 효과
-                &:hover {
-                    color: $gray-900;
-
-                    &::after {
-                        width: 100%; // 밑줄 표시
-                        background-color: $gray-900; // 스크롤 후에는 검은색 밑줄
-                    }
-                }
-            }
-        }
-    }
-
-    // 스크롤 시 헤더 숨김 스타일
-    &.hide {
-        transform: translateY(-100%); // 위로 올라가면서 사라짐
-        opacity: 0;
-        transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
-    }
-    .container {
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        // 햄버거 메뉴 아이콘 (모바일용)
-        .mobile-menu-icon {
-            display: none;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-            z-index: 101;
-            @include mobile {
-                display: block;
-            }
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-            gap: 46px;
-
-            @include mobile {
-                display: none; // 모바일에서는 메뉴 숨김
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.9);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-                z-index: 100;
-
-                &.active {
-                    display: flex;
-                }
-            }
-
-            li {
-                a {
-                    font-family: $font-family-title;
-                    font-weight: 500;
-                    font-size: 17px;
-                    text-decoration: none;
-                    color: #fff;
-                    transition: all 0.3s ease;
-                    position: relative;
-
-                    @include mobile {
-                        font-size: 20px;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        bottom: -5px;
-                        left: 0;
-                        background-color: #fff;
-                        transition: width 0.3s ease;
-                    }
-
-                    // 호버 시 효과
-                    &:hover {
-                        color: #fff;
-
-                        &::after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 #programs-kv {
     .container-kv {
         width: 100%;
@@ -252,6 +105,28 @@
             .gallery-image:hover .image-2 {
                 opacity: 100%;
             }
+            .gallery-image::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: 1;
+                border-radius: 30px;
+            }
+            .gallery-image:hover::before {
+                opacity: 3;
+            }
+
+            .gallery-image a {
+                transition: transform 0.3s ease-in-out;
+                z-index: 2;
+            }
+
             i {
                 position: absolute;
                 right: 8.5%;
@@ -270,11 +145,6 @@
                 background: #fff;
                 opacity: 30%;
                 cursor: pointer;
-            }
-
-            .map-icon:hover {
-                background: #000;
-                opacity: 100%;
             }
 
             .gallery-description {
@@ -335,7 +205,7 @@
             }
 
             .event-image:hover img {
-                transform: scale(1.3);
+                transform: scale(1.2);
             }
 
             .event-image::before {
@@ -356,12 +226,12 @@
                 opacity: 3;
             }
 
-            .event-image a{
-                transition: transform 0.3s ease-in-out;
-                z-index:2;
+            .event-image a {
+                transition: transform 0.1s ease-in-out;
+                z-index: 2;
             }
-            
-            .event-image:hover a{
+
+            .event-image:hover a {
                 transform: scale(1.5);
             }
 
@@ -411,6 +281,11 @@
 }
 
 @media (max-width: 1440px) {
+    #programs-kv {
+        .container-kv {
+            max-width: 1100px;
+        }
+    }
     #sec01 {
         .container-sec01 {
             width: 100%;
@@ -420,7 +295,7 @@
 
                 i {
                     right: 7.1%;
-                    bottom: 12.6%;
+                    bottom: 12%;
                 }
             }
         }
@@ -443,15 +318,18 @@
 
 @media (max-width: 768px) {
     #programs-kv {
-        .kv-subtitle {
-            p {
-                font-size: 1rem !important;
+        .container-kv {
+            padding-top: 110px;
+            .kv-subtitle {
+                p {
+                    font-size: 1rem !important;
+                }
             }
-        }
-        .kv-img {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            padding-bottom: 80px !important;
+            .kv-img {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                padding-bottom: 80px !important;
+            }
         }
     }
     #sec01 {
@@ -473,7 +351,7 @@
                     }
                     i {
                         right: 6.5%;
-                        bottom: 11.5%;
+                        bottom: 12.5%;
                     }
                 }
 
@@ -500,11 +378,76 @@
                         font-size: 1.25rem !important;
                     }
                 }
+
+                .event-card {
+                    i {
+                        right: 6.5%;
+                        bottom: 12.5%;
+                    }
+                }
             }
         }
     }
 }
 
+@media (max-width: 600px) {
+    #sec01 {
+        .container-sec01 {
+            width: 100%;
+            max-width: 100%;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            .galleries-content-grid {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+
+                .gallery-image {
+                    img {
+                        width: 100% !important;
+                        height: 350px;
+                    }
+                    i {
+                        right: 7.5%;
+                        bottom: 12.5%;
+                    }
+                }
+
+                .gallery-description {
+                    h2 {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+    #sec02 {
+        .container-sec02 {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            .events-content-grid {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                grid-template-columns: 1fr !important;
+                gap: 2rem;
+
+                .event-description {
+                    h2 {
+                        font-size: 1.25rem !important;
+                    }
+                }
+
+                .event-card {
+                    i {
+                        right: 7.5%;
+                        bottom: 14%;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 440px) {
     #programs-kv {
         .container-kv {
@@ -555,513 +498,8 @@
         }
     }
 }
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    height: 80px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
 
-    // 기본 상태(투명할 때)에서 텍스트는 흰색
-    h2 {
-        font-family: $font-family-title;
-        font-weight: 600;
-        font-size: 18px;
-        text-decoration: none;
-        color: #fff;
-        transition: color 0.3s ease;
-
-        a{
-            text-decoration: none;
-        }
-    }
-
-    // 스크롤 시 적용 스타일
-    &.scrolled {
-        background-color: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        h2 {
-            color: $gray-900;
-        }
-        .container {
-            // 스크롤 시 햄버거 아이콘 색상 변경
-            .mobile-menu-icon {
-                color: $gray-900;
-            }
-
-            ul li a {
-                color: $gray-900;
-
-                // 스크롤 후 호버 시 효과
-                &:hover {
-                    color: $gray-900;
-
-                    &::after {
-                        width: 100%; // 밑줄 표시
-                        background-color: $gray-900; // 스크롤 후에는 검은색 밑줄
-                    }
-                }
-            }
-        }
-    }
-
-    // 스크롤 시 헤더 숨김 스타일
-    &.hide {
-        transform: translateY(-100%); // 위로 올라가면서 사라짐
-        opacity: 0;
-        transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
-    }
-    .container {
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        // 햄버거 메뉴 아이콘 (모바일용)
-        .mobile-menu-icon {
-            display: none;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-            z-index: 101;
-            @include mobile {
-                display: block;
-            }
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-            gap: 46px;
-
-            @include mobile {
-                display: none; // 모바일에서는 메뉴 숨김
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.9);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-                z-index: 100;
-
-                &.active {
-                    display: flex;
-                }
-            }
-
-            li {
-                a {
-                    font-family: $font-family-title;
-                    font-weight: 500;
-                    font-size: 17px;
-                    text-decoration: none;
-                    color: #fff;
-                    transition: all 0.3s ease;
-                    position: relative;
-
-                    @include mobile {
-                        font-size: 20px;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        bottom: -5px;
-                        left: 0;
-                        background-color: #fff;
-                        transition: width 0.3s ease;
-                    }
-
-                    // 호버 시 효과
-                    &:hover {
-                        color: #fff;
-
-                        &::after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-#programs-kv {
-    .container-kv {
-        width: 100%;
-        margin: 0 auto;
-        padding-top: 250px;
-
-        .kv-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            h2 {
-                @include text-style("hero-title");
-
-                span {
-                    color: $primary-color-dark;
-                }
-            }
-        }
-
-        .kv-subtitle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-align: center;
-            padding-left: 1rem;
-            padding-right: 2rem;
-
-            p {
-                display: flex;
-                flex-direction: column;
-                font-family: $font-family-ui;
-                color: $gray-400;
-                font-weight: 300;
-                letter-spacing: 0.03em;
-                line-height: 140%;
-                font-size: 1.25rem;
-                padding-top: 1.625rem;
-            }
-        }
-
-        .kv-img {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-            padding-top: 3.8rem;
-            padding-bottom: 7.5rem;
-
-            img {
-                border-radius: 42px;
-                width: 100%;
-                height: 484px;
-            }
-        }
-    }
-}
-
-#sec01 {
-    .container-sec01 {
-        padding-top: 120px;
-        padding-bottom: 120px;
-        margin: 0 auto;
-        max-width: 1440px;
-        width: 100%;
-
-        .sec01-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h2 {
-                @include text-style("main-subtitle");
-                color: $primary-color-dark;
-            }
-        }
-
-        .galleries-content-grid {
-            padding-top: 64px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-
-            .gallery-image {
-                position: relative;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                display: flex;
-                .image-1 {
-                    border-radius: 30px;
-                    position: relative;
-                    transition: 1s ease-in-out;
-                }
-                .image-2 {
-                    border-radius: 30px;
-                    position: absolute;
-                    transition: 1s ease-in-out;
-                    opacity: 0;
-                }
-            }
-            .gallery-image:hover .image-1 {
-                opacity: 0;
-            }
-
-            .gallery-image:hover .image-2 {
-                opacity: 100%;
-            }
-            i {
-                position: absolute;
-                right: 8.5%;
-                bottom: 13%;
-                font-size: 2.5rem;
-                color: #fff;
-                z-index: 999;
-            }
-            .map-icon {
-                position: absolute;
-                right: 4.8%;
-                bottom: 9%;
-                padding: 2rem;
-                border: 1px solid #fff;
-                border-radius: 999px;
-                background: #fff;
-                opacity: 30%;
-                cursor: pointer;
-            }
-
-            .map-icon:hover {
-                background: #000;
-                opacity: 100%;
-            }
-
-            .gallery-description {
-                padding-top: 1.5rem;
-                h2 {
-                    font-size: 1.375rem;
-                    color: $gray-900;
-                    font-family: $font-family-title;
-                    padding-bottom: 0.75rem;
-                }
-                p {
-                    font-size: 1rem;
-                    color: $gray-500;
-                    font-family: $font-family-ui;
-                    font-weight: 300;
-                    line-height: 160%;
-                }
-            }
-        }
-    }
-}
-
-#sec02 {
-    .container-sec02 {
-        padding-top: 120px;
-        padding-bottom: 120px;
-        margin: 0 auto;
-        max-width: 1440px;
-        width: 100%;
-
-        .sec02-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h2 {
-                @include text-style("main-subtitle");
-                color: $primary-color-dark;
-            }
-        }
-
-        .events-content-grid {
-            padding-top: 64px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-
-            .event-image {
-                position: relative;
-                overflow: hidden;
-                border-radius: 30px;
-                img {
-                    transition: 0.5s ease-in-out;
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                    border-radius: 30px;
-                }
-            }
-
-            .event-image:hover img {
-                transform: scale(1.3);
-            }
-
-            .event-image::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.3);
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-                z-index: 1;
-                border-radius: 12px;
-            }
-
-            .event-image:hover::before {
-                opacity: 3;
-            }
-
-            .event-image a{
-                transition: transform 0.3s ease-in-out;
-                z-index:2;
-            }
-            
-            .event-image:hover a{
-                transform: scale(1.5);
-            }
-
-            i {
-                position: absolute;
-                right: 6.6%;
-                bottom: 12.5%;
-                font-size: 2.5rem;
-                color: #fff;
-                z-index: 999;
-            }
-            .map-icon {
-                position: absolute;
-                right: 4.8%;
-                bottom: 9%;
-                padding: 2rem;
-                border: 1px solid #fff;
-                border-radius: 999px;
-                background: #fff;
-                opacity: 30%;
-                cursor: pointer;
-            }
-
-            .map-icon:hover {
-                background: #000;
-                opacity: 100%;
-            }
-
-            .event-description {
-                padding-top: 1.5rem;
-                h2 {
-                    font-size: 1.375rem;
-                    color: $gray-900;
-                    font-family: $font-family-title;
-                    padding-bottom: 0.75rem;
-                }
-                p {
-                    font-size: 1rem;
-                    color: $gray-500;
-                    font-family: $font-family-ui;
-                    font-weight: 300;
-                    line-height: 150%;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1440px) {
-    #sec01 {
-        .container-sec01 {
-            width: 100%;
-            max-width: 1100px;
-            .galleries-content-grid {
-                grid-template-columns: repeat(2, 1fr);
-
-                i {
-                    right: 7.1%;
-                    bottom: 12.6%;
-                }
-            }
-        }
-    }
-
-    #sec02 {
-        .container-sec02 {
-            width: 100%;
-            max-width: 1100px;
-
-            .events-content-grid {
-                i {
-                    right: 7.1%;
-                    bottom: 14%;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    #programs-kv {
-        .kv-subtitle {
-            p {
-                font-size: 1rem !important;
-            }
-        }
-        .kv-img {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            padding-bottom: 80px !important;
-        }
-    }
-    #sec01 {
-        .container-sec01 {
-            width: 100%;
-            max-width: 100%;
-            padding-top: 80px;
-            padding-bottom: 80px;
-            .galleries-content-grid {
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
-                grid-template-columns: 1fr !important;
-                gap: 2rem;
-
-                .gallery-image {
-                    img {
-                        width: 100% !important;
-                        height: 350px;
-                    }
-                    i {
-                        right: 6.5%;
-                        bottom: 11.5%;
-                    }
-                }
-
-                .gallery-description {
-                    h2 {
-                        font-size: 1.25rem;
-                    }
-                }
-            }
-        }
-    }
-    #sec02 {
-        .container-sec02 {
-            padding-top: 80px;
-            padding-bottom: 80px;
-            .events-content-grid {
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
-                grid-template-columns: 1fr !important;
-                gap: 2rem;
-
-                .event-description {
-                    h2 {
-                        font-size: 1.25rem !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 440px) {
+@media (max-width: 390px) {
     #programs-kv {
         .container-kv {
             .kv-subtitle {
@@ -1079,7 +517,7 @@
                         height: 300px;
                     }
                     i {
-                        right: 7.8%;
+                        right: 8%;
                         bottom: 13%;
                     }
                 }
@@ -1097,8 +535,8 @@
             .events-content-grid {
                 .event-image {
                     i {
-                        right: 7.8%;
-                        bottom: 14.5%;
+                        right: 8%;
+                        bottom: 16%;
                     }
                 }
 
@@ -1111,3 +549,4 @@
         }
     }
 }
+
