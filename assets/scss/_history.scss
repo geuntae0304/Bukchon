@@ -101,13 +101,14 @@
     // 하단 이미지 영역
     .history-image {
         width: 100%;
+        height: 65vh;
         flex-grow: 1; 
         background-size: cover;
         background-position: center;
     }
 
     // 각 섹션별 이미지 배경
-    .img1 { background-image: url('../images/history-test/1.png'); }
+    .img1 { background-image: url('../images/history/hero.png'); }
     .img2 { background-image: url('../images/history-test/2.png'); }
     .img3 { background-image: url('../images/history-test/3.png'); }
     .img4 { background-image: url('../images/history-test/4.png'); }
