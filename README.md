@@ -28,7 +28,8 @@
 ---
 
 ## 🗂️ 폴더 구조
-/Bukchon/
+```
+Bukchon/
 ├── .DS_Store
 ├── .git/
 ├── .gitignore
@@ -71,6 +72,7 @@
 ├── programs.html
 ├── public.html
 └── visit.html
+```
 
 ---
 
