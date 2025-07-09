@@ -28,43 +28,43 @@
 ---
 
 ## 🗂️ 폴더 구조
-/Users/GEUNTAE/Documents/GitHub/sam/Bukchon/
+/Bukchon/
 ├── .DS_Store
 ├── .git/
 ├── .gitignore
 ├── .history/
 ├── README.md
 ├── assets/
-│   ├── .DS_Store
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── main.css.map
-│   │   ├── modal.css
-│   │   ├── modal_20250623151955.css
-│   │   ├── modal_20250623152020.css
-│   │   ├── modal_20250623152043.css
-│   │   ├── modal_20250623152103.css
-│   │   └── modal_20250623152119.css
-│   ├── images/
-│   ├── js/
-│   │   ├── history.js
-│   │   ├── main.js
-│   │   └── modal.js
-│   └── scss/
-│       ├── _animation.scss
-│       ├── _dining.scss
-│       ├── _fonts.scss
-│       ├── _footer.scss
-│       ├── _history.scss
-│       ├── _mixins.scss
-│       ├── _modal.scss
-│       ├── _programs.scss
-│       ├── _public.scss
-│       ├── _reset.scss
-│       ├── _typography.scss
-│       ├── _variables.scss
-│       ├── _visit.scss
-│       └── main.scss
+│   ├── .DS_Store
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── main.css.map
+│   │   ├── modal.css
+│   │   ├── modal_20250623151955.css
+│   │   ├── modal_20250623152020.css
+│   │   ├── modal_20250623152043.css
+│   │   ├── modal_20250623152103.css
+│   │   └── modal_20250623152119.css
+│   ├── images/
+│   ├── js/
+│   │   ├── history.js
+│   │   ├── main.js
+│   │   └── modal.js
+│   └── scss/
+│       ├── _animation.scss
+│       ├── _dining.scss
+│       ├── _fonts.scss
+│       ├── _footer.scss
+│       ├── _history.scss
+│       ├── _mixins.scss
+│       ├── _modal.scss
+│       ├── _programs.scss
+│       ├── _public.scss
+│       ├── _reset.scss
+│       ├── _typography.scss
+│       ├── _variables.scss
+│       ├── _visit.scss
+│       └── main.scss
 ├── dining.html
 ├── history.html
 ├── index.html
