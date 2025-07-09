@@ -28,7 +28,7 @@
 ---
 
 ## 🗂️ 폴더 구조
-Bukchon/
+/Users/GEUNTAE/Documents/GitHub/sam/Bukchon/
 ├── .DS_Store
 ├── .git/
 ├── .gitignore
